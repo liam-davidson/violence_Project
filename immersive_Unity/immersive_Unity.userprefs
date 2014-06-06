@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterResponses.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\iTweenEditor\README.txt">
     <Files>
-      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="28" Column="6" />
-      <File FileName="Assets\Scripts\CharacterInteract.cs" Line="119" Column="36" />
-      <File FileName="Assets\Scripts\DialogGUI.cs" Line="124" Column="31" />
+      <File FileName="Assets\iTweenEditor\README.txt" Line="3" Column="177" />
+      <File FileName="Assets\iTweenEditor\iTweenEvent.cs" Line="173" Column="1" />
+      <File FileName="Assets\iTweenEditor\README.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
