@@ -1,0 +1,22 @@
+print "Starting maya loading and fbx conversion \n";
+			
+if (`file -q -exists "Z:/VIOLEN~1/IMMERS~1/Assets/RUSSIA~1.MB"`)
+{
+	file -o "Z:/VIOLEN~1/IMMERS~1/Assets/RUSSIA~1.MB";
+	FBXExportEmbeddedTextures -v false;
+	// FBXExportHardEdges -v true;
+	FBXExportApplyConstantKeyReducer -v false;
+	FBXExportShowUI -v false;
+
+	print "Before fbx export\n";
+	FBXExport -f "Z:/VIOLEN~1/IMMERS~1/Temp/ExportedFBXFile.fbx";
+	print "after fbx export\n";
+}
+else
+	print "Could not open Maya file.";
+
+system ("del \"Z:\\VIOLEN~1\\IMMERS~1\\Temp\\CommandPipe\"");
+
+$donepipeKill = `fopen "Z:/VIOLEN~1/IMMERS~1/Temp/SyncPipeKill" "w"`;
+fwrite $donepipeKill "Done";
+fclose $donepipeKill;
