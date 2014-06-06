@@ -5,6 +5,7 @@ public class CharacterResponses : MonoBehaviour {
 	public CharacterInteract state;
 	public MoveToWaypoint waypointMove;
 	public UniformBSplineMover splineMover;
+	public FocusOnPlayer aiLook;
 
 	public GameObject AI;
 	
@@ -18,6 +19,7 @@ public class CharacterResponses : MonoBehaviour {
 			//splineMover.startMove();
 			//waypointMove.currentWaypoint = waypoints[0];
 			iTween.MoveTo(AI,iTween.Hash("x", 0.1, "easeType", "easeInOutExpo", "delay", 0.75, "time", 2, "orienttopath", true));
+			//aiLook.enabled = false;
 			LeaveDialog();
 			break;
 		

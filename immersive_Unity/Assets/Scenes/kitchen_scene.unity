@@ -5458,9 +5458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a4d40b53404ff4d9cb14cd6977aab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  path: {fileID: 0}
-  time: 3
 --- !u!114 &614526545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,9 +5505,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 614526551}
   waypointMove: {fileID: 614526546}
-  splineMover: {fileID: 0}
+  splineMover: {fileID: 614526544}
+  aiLook: {fileID: 614526545}
   AI: {fileID: 614526543}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &614526548
 Animator:
   serializedVersion: 3
@@ -16007,6 +16007,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: c6867c84e353e474ba50bc8f9c21e84c, type: 2}
+      propertyPath: aiLook
+      value: 
+      objectReference: {fileID: 614526545}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6867c84e353e474ba50bc8f9c21e84c, type: 2}
   m_RootGameObject: {fileID: 614526543}
