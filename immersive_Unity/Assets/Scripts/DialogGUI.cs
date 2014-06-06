@@ -46,7 +46,6 @@ public class DialogGUI : MonoBehaviour {
 		var guiMat = GUI.matrix;
 
 		var halfWidth = Screen.width/2;
-		var halfHeight = Screen.height/2;
 
 		var buttonWidth = 150;
 		var buttonHeight = 50;
@@ -143,8 +142,8 @@ public class DialogGUI : MonoBehaviour {
 		#endregion
 		GUI.EndGroup ();
 
-		if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetButton("Exit"))) {
-		
+		//if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetButton("Exit"))) {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
 			state.itemUseable = true;
 			GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
 			GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;

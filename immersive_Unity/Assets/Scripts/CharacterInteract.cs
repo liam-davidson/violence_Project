@@ -115,7 +115,8 @@ public class CharacterInteract : MonoBehaviour {
 			target.text = "Talk E";
 			renderer.material = Material.glowMaterial;
 
-			if(Input.GetKeyDown(KeyCode.E) || (Input.GetButton("Interact"))){
+			//if(Input.GetKeyDown(KeyCode.E) || (Input.GetButton("Interact"))){
+			if(Input.GetKeyDown(KeyCode.E)){
 
 				GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = false;
 				GameObject.FindWithTag ("Description").GetComponent<GUIText>().enabled = true;

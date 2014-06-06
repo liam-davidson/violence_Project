@@ -12,7 +12,7 @@ public class FocusOnPlayer : MonoBehaviour {
 	public float distance = 5.0F;
 
 	Vector3 adjustRot = new Vector3(0, -90, -90);
-
+	int damp = 5;
 	// Use this for initialization
 	void Awake(){
 		maxHeadRot = 85.0f;
@@ -37,6 +37,12 @@ public class FocusOnPlayer : MonoBehaviour {
 			spine.transform.LookAt(point);
 			spine.transform.Rotate(adjustRot);
 		}
+
+		var lookPos = targetFollow.position - transform.position;
+		lookPos.y = 0;
+		
+		var rotationAngle = Quaternion.LookRotation (lookPos);
+		transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
 
 	}
 }

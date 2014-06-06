@@ -4,17 +4,28 @@ using System.Collections;
 public class CharacterResponses : MonoBehaviour {
 	public CharacterInteract state;
 	public MoveToWaypoint waypointMove;
+	public UniformBSplineMover splineMover;
+
+	public GameObject AI;
+	
+	public Transform[] waypoints;
 
 	public void checkResponse(int caseNum){
 		switch(caseNum){
 		
 		case 1:
 			print ("case1 ACTIVATE!");
+			//splineMover.startMove();
+			//waypointMove.currentWaypoint = waypoints[0];
+			iTween.MoveTo(AI,iTween.Hash("x", 0.1, "easeType", "easeInOutExpo", "delay", 0.75, "time", 2, "orienttopath", true));
+			LeaveDialog();
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
-			waypointMove.enabled = true;
+			//waypointMove.enabled = true;
+			//waypointMove.changeWaypoint("Waypoint2");
+			//waypointMove.currentWaypoint = waypoints[1];
 			LeaveDialog();
 		break;	
 		
