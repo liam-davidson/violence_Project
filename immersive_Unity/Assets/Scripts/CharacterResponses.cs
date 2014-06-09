@@ -33,37 +33,46 @@ public class CharacterResponses : MonoBehaviour {
 			print ("case2 ACTIVATE!");
 			iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
 			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
 			LeaveDialog();
 		break;	
 		
 		case 3:
 			print ("case3 ACTIVATE!");
+			LeaveDialog();
 			break;
 		
 		case 4:
 			print ("case4 ACTIVATE!");
+			LeaveDialog();
 			break;
 
 		case 5:
 			print ("case5 ACTIVATE!");
+			LeaveDialog();
 			break;
 			
 		case 6:
 			print ("case6 ACTIVATE!");
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
+			LeaveDialog();
 			break;	
 			
 		case 7:
 			print ("case7 ACTIVATE!");
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
 			break;
 			
 		case 8:
 			print ("case8 ACTIVATE!");
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
+			LeaveDialog();
 			break;
 
 		case 9:
