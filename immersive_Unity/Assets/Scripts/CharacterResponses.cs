@@ -3,8 +3,7 @@ using System.Collections;
 
 public class CharacterResponses : MonoBehaviour {
 	public CharacterInteract state;
-	public MoveToWaypoint waypointMove;
-	public UniformBSplineMover splineMover;
+
 	public FocusOnPlayer aiLook;
 
 	public GameObject AI;
@@ -18,16 +17,15 @@ public class CharacterResponses : MonoBehaviour {
 			print ("case1 ACTIVATE!");
 			//splineMover.startMove();
 			//waypointMove.currentWaypoint = waypoints[0];
-			iTween.MoveTo(AI,iTween.Hash("x", 0.1, "easeType", "easeInOutExpo", "delay", 0.75, "time", 2, "orienttopath", true));
-			//aiLook.enabled = false;
+			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+			aiLook.enabled = false;
 			LeaveDialog();
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
-			//waypointMove.enabled = true;
-			//waypointMove.changeWaypoint("Waypoint2");
-			//waypointMove.currentWaypoint = waypoints[1];
+			iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
+			aiLook.enabled = false;
 			LeaveDialog();
 		break;	
 		
@@ -45,14 +43,20 @@ public class CharacterResponses : MonoBehaviour {
 			
 		case 6:
 			print ("case6 ACTIVATE!");
+			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+			aiLook.enabled = false;
 			break;	
 			
 		case 7:
 			print ("case7 ACTIVATE!");
+			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+			aiLook.enabled = false;
 			break;
 			
 		case 8:
 			print ("case8 ACTIVATE!");
+			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+			aiLook.enabled = false;
 			break;
 
 		case 9:
@@ -75,6 +79,10 @@ public class CharacterResponses : MonoBehaviour {
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 		
 		print("Exited Dialog!");
+	}
+
+	void LookAtPlayer(){
+		aiLook.enabled = true;
 	}
 
 }
