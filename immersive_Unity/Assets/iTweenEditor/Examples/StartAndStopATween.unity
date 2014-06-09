@@ -275,17 +275,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenName: Bounce
+  tweenName: 426f756e6365
   playAutomatically: 0
   delay: 0
   type: 25
   showIconInInspector: 0
   keys:
-  - x
-  - looptype
-  - easetype
-  - time
-  - delay
+  - 78
+  - 6c6f6f7074797065
+  - 6561736574797065
+  - 74696d65
+  - 64656c6179
   indexes: 0000000000000000000000000100000002000000
   metadatas:
   - 
@@ -298,7 +298,7 @@ MonoBehaviour:
   - -90
   - 3
   - .5
-  bools: 
+  bools: []
   strings: []
   vector3s: []
   colors: []
@@ -323,15 +323,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenName: Color Fade
+  tweenName: 436f6c6f722046616465
   playAutomatically: 0
   delay: 0
   type: 6
   showIconInInspector: 1
   keys:
-  - color
-  - time
-  - easetype
+  - 636f6c6f72
+  - 74696d65
+  - 6561736574797065
   indexes: 000000000000000000000000
   metadatas:
   - 
@@ -340,11 +340,14 @@ MonoBehaviour:
   ints: 
   floats:
   - 4
-  bools: 
+  bools: []
   strings: []
   vector3s: []
   colors:
-  - {r: 0, g: 1, b: .202797174, a: 1}
+  - r: 0
+    g: 1
+    b: .202797174
+    a: 1
   spaces: 
   easeTypes: 08000000
   loopTypes: 

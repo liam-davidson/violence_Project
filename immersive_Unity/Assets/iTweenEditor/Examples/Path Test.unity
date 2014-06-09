@@ -441,15 +441,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: New Path 1
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathName: 4e657720506174682031
+  pathColor:
+    r: 0
+    g: 1
+    b: 1
+    a: 1
   nodes:
   - {x: -.812926292, y: -3.61732197, z: -1.57379484}
   - {x: 4.54168272, y: -1.63859558, z: -3.92771292}
   - {x: 4.00370836, y: .979516983, z: -2.96440935}
   nodeCount: 3
   initialized: 1
-  initialName: New Path 1
+  initialName: 4e657720506174682031
 --- !u!114 &32
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,24 +471,25 @@ MonoBehaviour:
   type: 17
   showIconInInspector: 1
   keys:
-  - time
-  - easetype
-  - path
-  - movetopath
-  - looptype
+  - 74696d65
+  - 6561736574797065
+  - 70617468
+  - 6d6f7665746f70617468
+  - 6c6f6f7074797065
   indexes: 0000000000000000000000000000000000000000
   metadatas:
   - 
   - 
-  - p
+  - 70
   - 
   - 
   ints: 
   floats:
   - 5
-  bools: 01
+  bools:
+  - 1
   strings:
-  - New Path 1
+  - 4e657720506174682031
   vector3s: []
   colors: []
   spaces: 
