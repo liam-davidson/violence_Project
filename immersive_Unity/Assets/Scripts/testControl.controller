@@ -69,13 +69,9 @@ Transition:
   m_TransitionDuration: .00232558115
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Time
+  - m_ConditionMode: 1
+    m_ConditionEvent: isWalking
     m_EventTreshold: .0500000007
-    m_ExitTime: .997674406
-  - m_ConditionMode: 4
-    m_ConditionEvent: Time
-    m_EventTreshold: .200000003
     m_ExitTime: .997674406
   m_Atomic: 1
   m_Solo: 0
@@ -109,8 +105,8 @@ Transition:
   m_TransitionDuration: .0833333284
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Time
+  - m_ConditionMode: 2
+    m_ConditionEvent: isWalking
     m_EventTreshold: .949999988
     m_ExitTime: .916666687
   m_Atomic: 1
@@ -203,13 +199,13 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110198686}
     data:
-      first: {fileID: 110270187}
-      second:
-      - {fileID: 110174019}
-    data:
       first: {fileID: 110220563}
       second:
       - {fileID: 110157217}
+    data:
+      first: {fileID: 110270187}
+      second:
+      - {fileID: 110174019}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -192, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

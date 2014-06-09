@@ -7,8 +7,14 @@ public class CharacterResponses : MonoBehaviour {
 	public FocusOnPlayer aiLook;
 
 	public GameObject AI;
-	
+
+	private Animator anim;
+
 	public Transform[] waypoints;
+
+	void Start() {
+		anim = GetComponent<Animator>();
+		}
 
 	public void checkResponse(int caseNum){
 		switch(caseNum){
@@ -19,6 +25,7 @@ public class CharacterResponses : MonoBehaviour {
 			//waypointMove.currentWaypoint = waypoints[0];
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
 			LeaveDialog();
 			break;
 		
@@ -81,8 +88,8 @@ public class CharacterResponses : MonoBehaviour {
 		print("Exited Dialog!");
 	}
 
-	void LookAtPlayer(){
+	void eventEnd(){
+		anim.SetBool("isWalking", false);
 		aiLook.enabled = true;
 	}
-
 }
