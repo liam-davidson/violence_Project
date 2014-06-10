@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterInteract.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterResponses.cs">
     <Files>
-      <File FileName="Assets\Scripts\CharacterInteract.cs" Line="71" Column="20" />
+      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="16" Column="28" />
+      <File FileName="Assets\Scripts\DialogGUI.cs" Line="16" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

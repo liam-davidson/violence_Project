@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using System;
+
+using UnityEngine;
 using System.Collections;
 
 public class CharacterResponses : MonoBehaviour {
@@ -9,6 +12,8 @@ public class CharacterResponses : MonoBehaviour {
 	public GameObject AI;
 
 	private Animator anim;
+
+	public DialogGUI dialogue;
 
 	public Transform[] waypoints;
 
@@ -86,6 +91,23 @@ public class CharacterResponses : MonoBehaviour {
 		}
 	}
 
+	void WriteToFile(){
+
+		// Create an instance of StreamWriter to write text to a file.
+		StreamWriter sw = new StreamWriter("TestFile.txt");
+		// Add some text to the file.
+		sw.Write("This is the ");
+		sw.WriteLine("header for the file.");
+		sw.WriteLine("-------------------");
+		// Arbitrary objects can also be written to the file.
+		sw.Write("The date is: ");
+		sw.WriteLine(DateTime.Now);
+		sw.WriteLine("-------------------");
+		sw.WriteLine(dialogue.responseNum);
+		sw.WriteLine("-------------------");
+		sw.Close();
+	}
+
 	void LeaveDialog(){
 		state.itemUseable = true;
 		
@@ -93,7 +115,9 @@ public class CharacterResponses : MonoBehaviour {
 		GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 		
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
-		
+
+		WriteToFile();
+
 		print("Exited Dialog!");
 	}
 

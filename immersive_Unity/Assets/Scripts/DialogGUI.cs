@@ -21,18 +21,18 @@ public class DialogGUI : MonoBehaviour {
 	private Vector3 scale;
 
 	public options dialogMenu;
-	public CharacterResponses reponse;
+	public CharacterResponses response;
 	public Vector3 lookTarget;
 	
 	float originalWidth = 1024.0f;
 	float originalHeight = 768.0f;
 	float traverseSpeed = 360;
 
-	int reponseNum;
+	public int responseNum;
 
 	void Start(){
 		state = gameObject.GetComponent<CharacterInteract>();
-		reponseNum = 0;
+		responseNum = 0;
 	}
 	
 	void OnGUI(){
@@ -75,69 +75,69 @@ public class DialogGUI : MonoBehaviour {
 			
 			print("Button Clicked!");
 			changeDescription("test");
-			reponseNum = 1;
-			reponse.checkResponse(reponseNum);
+			responseNum = 1;
+			response.checkResponse(responseNum);
 		}
 
 		if (GUI.Button (new Rect (370, 40, buttonWidth, buttonHeight), dialogMenu.option2, guiSpacing)) {
 			
 			print("Button Clicked!");
 			changeDescription("test2");
-			reponseNum = 2;
-			reponse.checkResponse(reponseNum);
+			responseNum = 2;
+			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (10, 100, buttonWidth, buttonHeight), dialogMenu.option3)) {
 			
 			print("Button Clicked!");
 			changeDescription("test3");
-			reponseNum = 3;
-			reponse.checkResponse(reponseNum);
+			responseNum = 3;
+			response.checkResponse(responseNum);
 		}
 		
 		if (GUI.Button (new Rect (10, 160, buttonWidth, buttonHeight), dialogMenu.option4)) {
 			
 			print("Button Clicked!");
 			changeDescription("test4");	
-			reponseNum = 4;
-			reponse.checkResponse(reponseNum);
+			responseNum = 4;
+			response.checkResponse(responseNum);
 		}
 
 		if (GUI.Button (new Rect (420, 100, buttonWidth, buttonHeight), dialogMenu.option5)) {
 			
 			print("Button Clicked!");
 			changeDescription("test5");
-			reponseNum = 5;
-			reponse.checkResponse(reponseNum);
+			responseNum = 5;
+			response.checkResponse(responseNum);
 		}
 		
 		if (GUI.Button (new Rect (420, 160, buttonWidth, buttonHeight), dialogMenu.option6)) {
 			
 			print("Button Clicked!");
 			changeDescription("test6");
-			reponseNum = 6;
-			reponse.checkResponse(reponseNum);
+			responseNum = 6;
+			response.checkResponse(responseNum);
 		}
 
 		if (GUI.Button (new Rect (50, 220, buttonWidth, buttonHeight), dialogMenu.option7)) {
 			
 			print("Button Clicked!");
 			changeDescription("test7");
-			reponseNum = 7;
-			reponse.checkResponse(reponseNum);
+			responseNum = 7;
+			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (210, 220, buttonWidth, buttonHeight), dialogMenu.option8)) {
 			
 			print("Button Clicked!");
 			changeDescription("test8");
-			reponseNum = 8;
-			reponse.checkResponse(reponseNum);
+			responseNum = 8;
+			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (370, 220, buttonWidth, buttonHeight), dialogMenu.option9)) {
 			
 			print("Button Clicked!");
 			changeDescription("test9");
-			reponseNum = 9;
-			reponse.checkResponse(reponseNum);
+			responseNum = 9;
+			response.checkResponse(responseNum);
 		}
 		#endregion
 		GUI.EndGroup ();
