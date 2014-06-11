@@ -91,6 +91,7 @@ public class CharacterResponses : MonoBehaviour {
 		}
 	}
 
+	/*
 	void WriteToFile(){
 
 		// Create an instance of StreamWriter to write text to a file.
@@ -107,6 +108,23 @@ public class CharacterResponses : MonoBehaviour {
 		sw.WriteLine("-------------------");
 		sw.Close();
 	}
+	*/
+
+	void AddToFile(){
+		//StreamWriter sw = new StreamWriter("TestFile.txt");
+		StreamWriter sw = File.AppendText ("TestFile.xml");
+		//sw.Write ("This line was appended.");
+		//sw.WriteLine ("This one too.");
+		sw.WriteLine ("<?xml version='1.0' encoding='UTF-8'?>");
+		sw.Write ("<Scene>");
+
+		sw.WriteLine ("\t<Choice>");
+		sw.WriteLine ("\t\t" + dialogue.responseNum);
+		sw.WriteLine ("\t</Choice>");
+
+		sw.WriteLine ("</Scene>");
+		sw.Close ();
+	}
 
 	void LeaveDialog(){
 		state.itemUseable = true;
@@ -116,7 +134,8 @@ public class CharacterResponses : MonoBehaviour {
 		
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 
-		WriteToFile();
+		//WriteToFile();
+		AddToFile();
 
 		print("Exited Dialog!");
 	}
