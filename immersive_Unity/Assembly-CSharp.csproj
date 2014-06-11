@@ -63,14 +63,7 @@
      <Compile Include="Assets\Scripts\_GUIClasses.cs" />
      <Compile Include="Assets\Scripts\crosshair.cs" />
      <Compile Include="Assets\Scripts\crosshair_GUI.cs" />
-     <Compile Include="Assets\Splines\Scripts\HelperClasses\Set.cs" />
-     <Compile Include="Assets\Splines\Scripts\HelperClasses\Utility.cs" />
-     <Compile Include="Assets\Splines\Scripts\SplineClasses\Spline.cs" />
-     <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineColliderDraw.cs" />
-     <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineController.cs" />
-     <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineNode.cs" />
-     <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineTester.cs" />
-     <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
+     <Compile Include="Assets\Scripts\switch.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
@@ -81,7 +74,6 @@
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />
-     <None Include="Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Specular.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Specular.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Bump.shader" />
@@ -89,7 +81,6 @@
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Diffuse.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Diffuse.shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Bump.shader" />
      <None Include="Assets\iTweenEditor\README.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent.shader" />
