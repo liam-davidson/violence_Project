@@ -6,17 +6,12 @@ using System.Collections;
 
 public class CharacterResponses : MonoBehaviour {
 	public CharacterInteract state;
-
 	public FocusOnPlayer aiLook;
-
 	public GameObject AI;
-
-	private Animator anim;
-
 	public DialogGUI dialogue;
 
-	public Transform[] waypoints;
-
+	private Animator anim;
+		
 	void Start() {
 		anim = GetComponent<Animator>();
 		}
@@ -70,6 +65,7 @@ public class CharacterResponses : MonoBehaviour {
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
 			anim.SetBool("isWalking", true);
+			LeaveDialog();
 			break;
 			
 		case 8:

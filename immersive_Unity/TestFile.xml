@@ -3,3 +3,18 @@
 		1
 	</Choice>
 </Scene>
+<?xml version='1.0' encoding='UTF-8'?>
+<Scene>	<Choice>
+		3
+	</Choice>
+</Scene>
+<?xml version='1.0' encoding='UTF-8'?>
+<Scene>	<Choice>
+		7
+	</Choice>
+</Scene>
+<?xml version='1.0' encoding='UTF-8'?>
+<Scene>	<Choice>
+		1
+	</Choice>
+</Scene>
