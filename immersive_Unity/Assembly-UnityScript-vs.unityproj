@@ -49,12 +49,11 @@
      <Compile Include="Assets\MousePick.js" />
      <Compile Include="Assets\Scripts\AudioScript.js" />
      <Compile Include="Assets\Scripts\ControllerScript.js" />
-     <Compile Include="Assets\Scripts\Fade.js" />
      <Compile Include="Assets\Scripts\GUI\Menu.js" />
+     <Compile Include="Assets\Scripts\Menu_Script.js" />
      <Compile Include="Assets\Scripts\PlayerAnimation.js" />
      <Compile Include="Assets\Scripts\PlayerAttack.js" />
      <Compile Include="Assets\Scripts\PointToCursor.js" />
-     <Compile Include="Assets\Scripts\WriteToFile.js" />
      <Compile Include="Assets\Scripts\cameraController.js" />
      <Compile Include="Assets\Scripts\loading.js" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />

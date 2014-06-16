@@ -63,7 +63,6 @@
      <Compile Include="Assets\Scripts\_GUIClasses.cs" />
      <Compile Include="Assets\Scripts\crosshair.cs" />
      <Compile Include="Assets\Scripts\crosshair_GUI.cs" />
-     <Compile Include="Assets\Scripts\switch.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
