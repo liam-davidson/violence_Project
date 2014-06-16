@@ -556,6 +556,7 @@ GameObject:
   - 4: {fileID: 42099129}
   - 33: {fileID: 42099131}
   - 23: {fileID: 42099130}
+  - 65: {fileID: 42099132}
   m_Layer: 0
   m_Name: Box011
   m_TagString: Untagged
@@ -604,6 +605,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 360627915}
   m_GameObject: {fileID: 42099128}
   m_Mesh: {fileID: 4300030, guid: a1eeac7f56af5fc4589424fb40516139, type: 3}
+--- !u!65 &42099132
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42099128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 160.020279, y: 142.187943, z: 359.425629}
+  m_Center: {x: -8.901822e-05, y: -7.59390831, z: 179.712753}
 --- !u!1 &43160651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1461,7 @@ GameObject:
   - 4: {fileID: 94546908}
   - 33: {fileID: 94546910}
   - 23: {fileID: 94546909}
+  - 65: {fileID: 94546911}
   m_Layer: 0
   m_Name: Object14
   m_TagString: Untagged
@@ -1496,6 +1510,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 360627915}
   m_GameObject: {fileID: 94546907}
   m_Mesh: {fileID: 4300344, guid: a1eeac7f56af5fc4589424fb40516139, type: 3}
+--- !u!65 &94546911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94546907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.44000006, y: 5.00000095, z: 24.0000057}
+  m_Center: {x: -13.1700001, y: 1.31130241e-06, z: -12.0000124}
 --- !u!1 &97409392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10087,6 +10113,7 @@ GameObject:
   - 4: {fileID: 983342564}
   - 33: {fileID: 983342566}
   - 23: {fileID: 983342565}
+  - 65: {fileID: 983342567}
   m_Layer: 0
   m_Name: Rectangle19
   m_TagString: Untagged
@@ -10135,6 +10162,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 360627915}
   m_GameObject: {fileID: 983342563}
   m_Mesh: {fileID: 4300134, guid: a1eeac7f56af5fc4589424fb40516139, type: 3}
+--- !u!65 &983342567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 983342563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.50000048, y: 25.0000153, z: .300000042}
+  m_Center: {x: -9.53674316e-07, y: 0, z: .150000498}
 --- !u!1 &986538531
 GameObject:
   m_ObjectHideFlags: 0
@@ -21700,7 +21739,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131262517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e630b8b69de96d45b7560eb92d45b39, type: 3}
   m_Name: 
@@ -21737,15 +21776,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogMenu:
-    option1: 1
-    option2: 2
-    option3: 3
-    option4: 4
-    option5: 5
-    option6: 6
-    option7: 7
-    option8: 8
-    option9: 9
+    option1: 'Report it '
+    option2: Talk it out
+    option3: Insult
+    option4: Joke
+    option5: Shove him
+    option6: "Punch, kick\u2026"
+    option7: Threaten
+    option8: Ignore it
+    option9: Leave
   response: {fileID: 2131262524}
   lookTarget: {x: 0, y: 0, z: 0}
   responseNum: 0

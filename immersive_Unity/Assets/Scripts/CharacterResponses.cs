@@ -152,6 +152,7 @@ public class CharacterResponses : MonoBehaviour {
 		}
 
 		anim.SetBool("isWalking", false);
-		aiLook.enabled = true;
+		//Uncomment to let the AI look at you when he's done walking
+		//aiLook.enabled = true;
 	}
 }
