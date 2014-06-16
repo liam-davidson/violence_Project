@@ -119,7 +119,7 @@ public class CharacterInteract : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.E)){
 
 				GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = false;
-				GameObject.FindWithTag ("Description").GetComponent<GUIText>().enabled = true;
+				//GameObject.FindWithTag ("Description").GetComponent<GUIText>().enabled = true;
 
 				itemUseable = false; 
 			}

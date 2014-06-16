@@ -74,7 +74,7 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (50, 40, buttonWidth, buttonHeight), dialogMenu.option1, guiSpacing)) {
 			
 			print("Button Clicked!");
-			changeDescription("test");
+			//changeDescription("test");
 			responseNum = 1;
 			response.checkResponse(responseNum);
 		}
@@ -82,14 +82,14 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (370, 40, buttonWidth, buttonHeight), dialogMenu.option2, guiSpacing)) {
 			
 			print("Button Clicked!");
-			changeDescription("test2");
+			//changeDescription("test2");
 			responseNum = 2;
 			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (10, 100, buttonWidth, buttonHeight), dialogMenu.option3)) {
 			
 			print("Button Clicked!");
-			changeDescription("test3");
+			//changeDescription("test3");
 			responseNum = 3;
 			response.checkResponse(responseNum);
 		}
@@ -97,7 +97,7 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (10, 160, buttonWidth, buttonHeight), dialogMenu.option4)) {
 			
 			print("Button Clicked!");
-			changeDescription("test4");	
+			//changeDescription("test4");	
 			responseNum = 4;
 			response.checkResponse(responseNum);
 		}
@@ -105,7 +105,7 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (420, 100, buttonWidth, buttonHeight), dialogMenu.option5)) {
 			
 			print("Button Clicked!");
-			changeDescription("test5");
+			//changeDescription("test5");
 			responseNum = 5;
 			response.checkResponse(responseNum);
 		}
@@ -113,7 +113,7 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (420, 160, buttonWidth, buttonHeight), dialogMenu.option6)) {
 			
 			print("Button Clicked!");
-			changeDescription("test6");
+			//changeDescription("test6");
 			responseNum = 6;
 			response.checkResponse(responseNum);
 		}
@@ -121,21 +121,21 @@ public class DialogGUI : MonoBehaviour {
 		if (GUI.Button (new Rect (50, 220, buttonWidth, buttonHeight), dialogMenu.option7)) {
 			
 			print("Button Clicked!");
-			changeDescription("test7");
+			//changeDescription("test7");
 			responseNum = 7;
 			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (210, 220, buttonWidth, buttonHeight), dialogMenu.option8)) {
 			
 			print("Button Clicked!");
-			changeDescription("test8");
+			//changeDescription("test8");
 			responseNum = 8;
 			response.checkResponse(responseNum);
 		}
 		if (GUI.Button (new Rect (370, 220, buttonWidth, buttonHeight), dialogMenu.option9)) {
 			
 			print("Button Clicked!");
-			changeDescription("test9");
+			//changeDescription("test9");
 			responseNum = 9;
 			response.checkResponse(responseNum);
 		}
@@ -145,8 +145,8 @@ public class DialogGUI : MonoBehaviour {
 		//if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetButton("Exit"))) {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			state.itemUseable = true;
-			GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
-			GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
+			//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
+			//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 
 			GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 

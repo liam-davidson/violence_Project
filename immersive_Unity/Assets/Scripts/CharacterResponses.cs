@@ -132,8 +132,8 @@ public class CharacterResponses : MonoBehaviour {
 	void LeaveDialog(){
 		state.itemUseable = true;
 		
-		GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
-		GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
+		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
+		//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 		
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 
@@ -147,7 +147,8 @@ public class CharacterResponses : MonoBehaviour {
 		if (choiceCounter == 2){
 			iTween.CameraFadeAdd ();
 			iTween.CameraFadeFrom (1,1);
-			Application.Quit();
+			//Application.Quit();
+			Application.LoadLevel ("Menu"); 
 		}
 
 		anim.SetBool("isWalking", false);
