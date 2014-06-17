@@ -11,11 +11,12 @@ public class CharacterResponses : MonoBehaviour {
 	public DialogGUI dialogue;
 
 	private Animator anim;
-		
+	private Animator animTV;
 	int choiceCounter;
 
 	void Start() {
 		anim = GetComponent<Animator>();
+		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 	}
 
 	void Update(){
@@ -142,15 +143,21 @@ public class CharacterResponses : MonoBehaviour {
 		print("Exited Dialog!");
 	}
 
-	void eventEnd(){
+	void tvEventEnd(){
 
+		animTV.SetBool("isTVOn", true);
+		eventEnd ();
+	}
+
+	void eventEnd(){
+		
 		if (choiceCounter == 2){
 			iTween.CameraFadeAdd ();
 			iTween.CameraFadeFrom (1,1);
 			//Application.Quit();
 			Application.LoadLevel ("Menu"); 
 		}
-
+		
 		anim.SetBool("isWalking", false);
 		//Uncomment to let the AI look at you when he's done walking
 		//aiLook.enabled = true;
