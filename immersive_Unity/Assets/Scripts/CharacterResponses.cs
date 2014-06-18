@@ -116,17 +116,10 @@ public class CharacterResponses : MonoBehaviour {
 	}
 	
 	void AddToFile(){
-
-		StreamWriter sw = File.AppendText ("TestFile.xml");
-
-		sw.WriteLine ("<?xml version='1.0' encoding='UTF-8'?>");
-		sw.Write ("<Scene>");
-
-		sw.WriteLine ("\t<Choice>");
-		sw.WriteLine ("\t\t" + dialogue.responseNum);
-		sw.WriteLine ("\t</Choice>");
-
-		sw.WriteLine ("</Scene>");
+		//StreamWriter sw = new StreamWriter("TestFile.txt");
+		StreamWriter sw = File.AppendText ("TestFile.txt");
+		sw.Write (",");
+		sw.Write (dialogue.responseNum);
 		sw.Close ();
 	}
 
