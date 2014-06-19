@@ -9,6 +9,8 @@ public class CharacterResponses : MonoBehaviour {
 	public FocusOnPlayer aiLook;
 	public GameObject AI;
 	public DialogGUI dialogue;
+	public Transform targetLook;
+
 
 	private Animator anim;
 	private Animator animTV;
@@ -35,6 +37,7 @@ public class CharacterResponses : MonoBehaviour {
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
 			anim.SetBool("isWalking", true);
+			anim.SetBool("interact", false);
 
 			choiceCounter++;
 			LeaveDialog();
@@ -142,11 +145,20 @@ public class CharacterResponses : MonoBehaviour {
 
 		animTV.SetBool("isTVOn", true);
 		eventEnd ();
+		iTweenEvent.GetEvent(AI,"SitEvent").Play();
+		anim.SetBool("isWalking", true);
 	}
 
 	void kitchenEventEnd(){
 
 		anim.SetBool("interact", true);
+		eventEnd ();
+	}
+
+	void chairEventEnd(){
+		Vector3 tempPos = new Vector3(0,targetLook.position.y,0);
+		transform.LookAt (tempPos);
+		//iTweenEvent.GetEvent(AI,"SitEvent").Play();
 		eventEnd ();
 	}
 

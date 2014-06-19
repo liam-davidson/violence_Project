@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\_GUIClasses.cs" />
      <Compile Include="Assets\Scripts\crosshair.cs" />
      <Compile Include="Assets\Scripts\crosshair_GUI.cs" />
+     <Compile Include="Assets\Xsens\MVN Sample Pack\Script\PlayerControl.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
@@ -97,7 +98,7 @@
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Specular.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Diffuse.shader" />
-     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
+     <None Include="Assets\Animtaions\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Bump.shader" />
      <None Include="Assets\ItemGlow.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Bump.shader" />
