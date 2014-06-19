@@ -93,7 +93,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110224122}
-  m_TransitionDuration: .00232558115
+  m_TransitionDuration: .00326035195
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -153,7 +153,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110224122}
   m_DstState: {fileID: 110200000}
-  m_TransitionDuration: .100000001
+  m_TransitionDuration: .390494823
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
@@ -173,8 +173,8 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110220563}
-  m_TransitionDuration: .00397721492
-  m_TransitionOffset: .0509102084
+  m_TransitionDuration: .0215070732
+  m_TransitionOffset: .00647765864
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: interact
@@ -195,7 +195,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: bb5715c9604094b48949fb4aaa87b4df, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 60, y: -36, z: 0}
+  m_Position: {x: 60, y: -60, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -210,7 +210,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: d292496162cb9ef40908e9f1d8ae5749, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 348, y: -36, z: 0}
+  m_Position: {x: 336, y: -60, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -223,7 +223,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 0}
+  - {fileID: 7400000, guid: 8683d73bfa733cf4e8412187dd4c6b40, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 60, y: 60, z: 0}
   m_IKOnFeet: 0
@@ -261,10 +261,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110224122}
-      second:
-      - {fileID: 110180031}
-    data:
       first: {fileID: 0}
       second: []
     data:
@@ -281,6 +277,10 @@ StateMachine:
       first: {fileID: 110220563}
       second:
       - {fileID: 110157217}
+    data:
+      first: {fileID: 110224122}
+      second:
+      - {fileID: 110180031}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -192, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

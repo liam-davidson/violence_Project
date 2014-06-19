@@ -12,11 +12,13 @@ public class CharacterResponses : MonoBehaviour {
 
 	private Animator anim;
 	private Animator animTV;
+	private Animator animKitchen;
 	int choiceCounter;
 
 	void Start() {
 		anim = GetComponent<Animator>();
 		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
+
 	}
 
 	void Update(){
@@ -139,6 +141,12 @@ public class CharacterResponses : MonoBehaviour {
 	void tvEventEnd(){
 
 		animTV.SetBool("isTVOn", true);
+		eventEnd ();
+	}
+
+	void kitchenEventEnd(){
+
+		anim.SetBool("interact", true);
 		eventEnd ();
 	}
 
