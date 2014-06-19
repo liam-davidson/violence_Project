@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterResponses.cs">
     <Files>
-      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="148" Column="3" />
-      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="166" Column="1" />
+      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="129" Column="28" />
+      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="167" Column="1" />
       <File FileName="Assets\Scripts\DialogGUI.cs" Line="1" Column="1" />
       <File FileName="Assets\LoadFade.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CharacterInteract.cs" Line="1" Column="1" />
