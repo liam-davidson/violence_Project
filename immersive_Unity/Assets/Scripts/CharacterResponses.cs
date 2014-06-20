@@ -124,12 +124,12 @@ public class CharacterResponses : MonoBehaviour {
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
 		StreamWriter sw = File.AppendText ("TestFile.txt");
 		sw.Write (",");
-		sw.Write (dialogue.responseNum);
+		sw.Write (choiceCounter);
 		sw.Close ();
 	}
 
 	void LeaveDialog(){
-		state.itemUseable = true;
+		//state.itemUseable = true;
 		
 		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
 		//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
