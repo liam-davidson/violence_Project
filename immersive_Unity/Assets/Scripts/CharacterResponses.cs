@@ -139,8 +139,8 @@ public class CharacterResponses : MonoBehaviour {
 	void LeaveDialog(){
 		state.itemUseable = true;
 		
-		GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
-		GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
+		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
+		//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 		
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 

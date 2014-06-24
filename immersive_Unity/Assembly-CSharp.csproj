@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\FocusOnPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MoveToWaypoint.cs" />
+     <Compile Include="Assets\Scripts\PlayerPathController.cs" />
      <Compile Include="Assets\Scripts\SmoothLook.cs" />
      <Compile Include="Assets\Scripts\SmoothLook1.cs" />
      <Compile Include="Assets\Scripts\Splines\UniformBSpline.cs" />
