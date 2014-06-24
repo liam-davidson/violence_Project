@@ -27,8 +27,8 @@ public class CharacterInteract : MonoBehaviour {
 	//private float maxHeadRot, maxSpineRot;
 	//public float smooth = 0.3F;
 	//public float distance = 5.0F;
-
-
+	Animator anim;
+	bool isSitting;
 	Vector3 adjustRot = new Vector3(0, -90, -90);
 
 	Quaternion saveRotation;
@@ -39,6 +39,10 @@ public class CharacterInteract : MonoBehaviour {
 	void Start(){
 		renderer.material = new Material(Material.defaultMaterial);
 		saveRotation = GameObject.FindWithTag("Player").transform.rotation;
+
+		anim = GetComponent<Animator>();
+
+
 	}
 
 	void Awake(){
@@ -47,7 +51,7 @@ public class CharacterInteract : MonoBehaviour {
 	}
 
 	void Update(){
-
+		isSitting = anim.GetBool ("isSitting");
 		/*Vector3 point = targetFollow.position;
 		Vector3 v3Dir = targetFollow.position - transform.position;
 
@@ -78,14 +82,17 @@ public class CharacterInteract : MonoBehaviour {
 			rotationReset = true;
 
 			//Now that the object has been used, it must always face towards the player.
-			if(targetFollow != null){
+			if(targetFollow != null && isSitting != true){
               		
 				 	var lookPos = targetFollow.position - transform.position;
 					lookPos.y = 0;
 					
 					var rotationAngle = Quaternion.LookRotation (lookPos);
 					transform.rotation = Quaternion.Slerp ( transform.rotation, rotationAngle, Time.deltaTime * damp);
-				}
+			}
+			else{
+				//Don't look at player
+			}
 		}
 		//If the player has left the interaction with the object,
 		//then allow the player to move and look around again.

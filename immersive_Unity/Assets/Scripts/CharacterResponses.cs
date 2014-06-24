@@ -15,7 +15,9 @@ public class CharacterResponses : MonoBehaviour {
 	private Animator anim;
 	private Animator animTV;
 	private Animator animKitchen;
+
 	int choiceCounter;
+	bool isSitting;
 
 	void Start() {
 		anim = GetComponent<Animator>();
@@ -24,6 +26,8 @@ public class CharacterResponses : MonoBehaviour {
 	}
 
 	void Update(){
+
+		isSitting = anim.GetBool("isSitting");
 
 		print ("ChoiceCounter = " + choiceCounter);
 	}
@@ -38,6 +42,10 @@ public class CharacterResponses : MonoBehaviour {
 			aiLook.enabled = false;
 			anim.SetBool("isWalking", true);
 			anim.SetBool("interact", false);
+
+			/*if(isSitting == true){
+				anim.SetBool("isSitting", false);
+			}*/
 
 			choiceCounter++;
 			LeaveDialog();
@@ -129,10 +137,10 @@ public class CharacterResponses : MonoBehaviour {
 	}
 
 	void LeaveDialog(){
-		//state.itemUseable = true;
+		state.itemUseable = true;
 		
-		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
-		//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
+		GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
+		GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 		
 		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 
@@ -143,8 +151,14 @@ public class CharacterResponses : MonoBehaviour {
 
 	void tvEventEnd(){
 
-		animTV.SetBool("isTVOn", true);
+		anim.SetBool("isWalking", false);
 		eventEnd ();
+		//anim.SetBool("interact", true);
+		/*if(anim.GetFloat("interactTime") == 0.12){
+			animTV.SetBool("isTVOn", true);
+			anim.SetBool("interact", false);
+		}*/
+		animTV.SetBool("isTVOn", true);
 		iTweenEvent.GetEvent(AI,"SitEvent").Play();
 		anim.SetBool("isWalking", true);
 	}
@@ -156,10 +170,16 @@ public class CharacterResponses : MonoBehaviour {
 	}
 
 	void chairEventEnd(){
-		Vector3 tempPos = new Vector3(0,targetLook.position.y,0);
-		transform.LookAt (tempPos);
-		//iTweenEvent.GetEvent(AI,"SitEvent").Play();
+		//Vector3 tempPos = new Vector3(0,targetLook.position.y,0);
+		//transform.LookAt (tempPos);
+		transform.LookAt(new Vector3(targetLook.position.x, transform.position.y, targetLook.position.z));
+	
+		anim.SetBool("isSitting", true);
 		eventEnd ();
+	}
+
+	void endInteract(){
+		anim.SetBool("i", false);
 	}
 
 	void eventEnd(){
