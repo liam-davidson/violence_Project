@@ -15,6 +15,7 @@ public class CharacterResponses : MonoBehaviour {
 	private Animator anim;
 	private Animator animTV;
 	private Animator animKitchen;
+	public GameObject Player;
 
 	int choiceCounter;
 	bool isSitting;
@@ -22,7 +23,7 @@ public class CharacterResponses : MonoBehaviour {
 	void Start() {
 		anim = GetComponent<Animator>();
 		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
-
+		//Player = GameObject.Find("FirstPersonController");
 	}
 
 	void Update(){
@@ -37,6 +38,9 @@ public class CharacterResponses : MonoBehaviour {
 		
 		case 1:
 			print ("case1 ACTIVATE!");
+
+			iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+			iTweenEvent.GetEvent(Player,"MoveToTvEvent").Play();
 
 			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;

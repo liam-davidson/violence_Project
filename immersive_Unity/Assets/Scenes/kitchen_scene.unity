@@ -3811,9 +3811,10 @@ MonoBehaviour:
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
   - {x: -4.06087589, y: .5, z: -1.21025252}
-  - {x: -2.89292288, y: .5, z: -3.1496799}
-  - {x: .0052781105, y: .5, z: -3.8931241}
-  nodeCount: 3
+  - {x: -2.28982568, y: .5, z: -1.38171482}
+  - {x: -1.31663799, y: .5, z: -2.85485029}
+  - {x: .145115137, y: .5, z: -4.08779144}
+  nodeCount: 4
   initialized: 1
   initialName: New Path 1
 --- !u!1 &302758821
@@ -12026,7 +12027,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988493625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.2520142, y: 0, z: 358.878143}
+  m_LocalPosition: {x: 9.19104385, y: 0, z: 358.878143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 646855622}
@@ -13212,6 +13213,8 @@ GameObject:
   - 136: {fileID: 1102062121}
   - 114: {fileID: 1102062123}
   - 114: {fileID: 1102062122}
+  - 114: {fileID: 1102062124}
+  - 114: {fileID: 1102062125}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -13391,7 +13394,7 @@ MonoBehaviour:
   playAutomatically: 1
   delay: 0
   type: 17
-  showIconInInspector: 1
+  showIconInInspector: 0
   keys:
   - delay
   - path
@@ -13418,7 +13421,7 @@ MonoBehaviour:
   vector3s: []
   colors: []
   spaces: 
-  easeTypes: 15000000
+  easeTypes: 01000000
   loopTypes: 
   gameObjects: []
   transforms: []
@@ -13438,6 +13441,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db33e6442d5f5c48b72d2ec591530c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1102062124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102062113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: SideStepEvent
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - delay
+  - time
+  indexes: 000000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  ints: 
+  floats:
+  - .200000003
+  - 2
+  bools: 
+  strings:
+  - SideStep
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &1102062125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102062113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: MoveToTvEvent
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  - easetype
+  - oncomplete
+  indexes: 0000000000000000010000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 7
+  - 12.5
+  bools: 
+  strings:
+  - FollowToTv
+  - OnComplete
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1104904821
 GameObject:
   m_ObjectHideFlags: 0
@@ -15353,6 +15449,7 @@ MonoBehaviour:
   AI: {fileID: 1258780092}
   dialogue: {fileID: 1258780099}
   targetLook: {fileID: 620464697}
+  Player: {fileID: 1102062113}
 --- !u!114 &1258780099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19441,6 +19538,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1601672799}
   - 114: {fileID: 1601672798}
+  - 114: {fileID: 1601672800}
+  - 114: {fileID: 1601672801}
   m_Layer: 0
   m_Name: PlayerPath
   m_TagString: Untagged
@@ -19463,7 +19562,7 @@ MonoBehaviour:
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
   - {x: -3.79179001, y: 1.60000002, z: -5.66903543}
-  - {x: -4.11532736, y: 1.60000002, z: -1.38482022}
+  - {x: -4.0999999, y: 1.60000002, z: -1.29999995}
   nodeCount: 2
   initialized: 1
   initialName: New Path 1
@@ -19479,6 +19578,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1601672800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601672797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: SideStep
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -4.0999999, y: 1.60000002, z: -1.29999995}
+  - {x: -5.25876713, y: 1.60000002, z: -2.13273239}
+  nodeCount: 2
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1601672801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601672797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: FollowToTv
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -5.25711584, y: 1.60000002, z: -2.13413572}
+  - {x: -2.26732063, y: 1.60000002, z: -3.52369857}
+  - {x: .00758981705, y: 1.60000002, z: -2.96458626}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1602677556
 GameObject:
   m_ObjectHideFlags: 0
