@@ -56,6 +56,16 @@ public class CharacterResponses : MonoBehaviour {
 
 				currentAiLocation = "TV";
 			}
+
+			else if(currentAiLocation == "Kitchen"){
+				iTweenEvent.GetEvent(AI,"KitchenToTvEvent").Play();
+				aiLook.enabled = false;
+				anim.SetBool("interact", false);
+				anim.SetBool("isWalking", true);
+				//anim.SetBool("interact", false);
+				//Code to move	
+			}
+
 			else if(currentAiLocation == "TV"){
 				//Code to move	
 			}
@@ -72,16 +82,40 @@ public class CharacterResponses : MonoBehaviour {
 		
 		case 2:
 			print ("case2 ACTIVATE!");
-			iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-			iTweenEvent.GetEvent(Player,"MoveToKitchenEvent").Play();
 
-			if(isSitting == true){
+
+		if(isSitting == true){
 				anim.SetBool("isSitting", false);
 			}
 
+			if (currentAiLocation == "default"){
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				iTweenEvent.GetEvent(Player,"MoveToKitchenEvent").Play();
 
-			iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
-			aiLook.enabled = false;
+				iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
+
+				anim.SetBool("isWalking", true);
+
+				aiLook.enabled = false;
+
+				currentAiLocation = "Kitchen";
+			}
+			else if (currentAiLocation == "TV"){
+				iTweenEvent.GetEvent(Player,"TvToKitchen").Play();
+
+				iTweenEvent.GetEvent(AI,"TvToKitchenEvent").Play();
+				anim.SetBool("isWalking", true);
+
+				aiLook.enabled = false;
+
+				currentAiLocation = "Kitchen";
+			}
+			else if (currentAiLocation == "Kitchen"){
+				//Do nothing since you're already there
+			}
+
+			//iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
+			//aiLook.enabled = false;
 			//anim.SetBool("isWalking", true);
 
 			choiceCounter++;
@@ -210,7 +244,7 @@ public class CharacterResponses : MonoBehaviour {
 
 	void eventEnd(){
 		
-		if (choiceCounter == 2){
+		if (choiceCounter == 4){
 			iTween.CameraFadeAdd ();
 			iTween.CameraFadeFrom (1,1);
 			//Application.Quit();

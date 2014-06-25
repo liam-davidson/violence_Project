@@ -168,10 +168,6 @@ Transition:
   m_TransitionDuration: .0334457718
   m_TransitionOffset: .0475405343
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: interactTime
-    m_EventTreshold: .119999997
-    m_ExitTime: .119999997
   - m_ConditionMode: 2
     m_ConditionEvent: interact
     m_EventTreshold: .119999997

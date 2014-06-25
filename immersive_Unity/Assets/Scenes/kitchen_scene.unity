@@ -1383,7 +1383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &81011827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,7 +3783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &301418291
 Transform:
   m_ObjectHideFlags: 0
@@ -12432,6 +12432,142 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016912784}
   m_Mesh: {fileID: 4300406, guid: a1eeac7f56af5fc4589424fb40516139, type: 3}
+--- !u!1 &1021179300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1021179301}
+  - 114: {fileID: 1021179305}
+  - 114: {fileID: 1021179304}
+  - 114: {fileID: 1021179303}
+  - 114: {fileID: 1021179302}
+  - 114: {fileID: 1021179306}
+  m_Layer: 0
+  m_Name: AiPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021179301
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.58111334, y: 3.23387527, z: 7.0756135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1353605918}
+  m_RootOrder: 4
+--- !u!114 &1021179302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: ChairPath
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: 0, y: .5, z: -3.8931241}
+  - {x: -.484388709, y: .5, z: -2.46136236}
+  nodeCount: 2
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1021179303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: TvPath
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -4.06087589, y: .5, z: -1.21025252}
+  - {x: -2.28982568, y: .5, z: -1.38171482}
+  - {x: -1.31663799, y: .5, z: -2.85485029}
+  - {x: .145115137, y: .5, z: -4.08779144}
+  nodeCount: 4
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1021179304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: KitchenPath
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -4.21088886, y: .5, z: -.704449058}
+  - {x: -2.80436802, y: .5, z: -.62219727}
+  - {x: -2.29338312, y: .5, z: 1.63881278}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1021179305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: TVtoKitchenAI
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -.209431529, y: .5, z: -2.46136189}
+  - {x: -1.26385427, y: .5, z: -3.48752546}
+  - {x: -3.39103603, y: .5, z: -2.30204391}
+  - {x: -2.90674663, y: .5, z: -.730656862}
+  - {x: -2.29338288, y: .5, z: 1.63881302}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1021179306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021179300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: KitchenToTvPathAI
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: -2.29338288, y: .5, z: 1.63881302}
+  - {x: -2.6390965, y: .5, z: 0}
+  - {x: -3.60269332, y: .5, z: -2.24097013}
+  - {x: -1.21496677, y: .5, z: -3.42628598}
+  - {x: -.209431499, y: .5, z: -2.46136189}
+  nodeCount: 5
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1022242605
 GameObject:
   m_ObjectHideFlags: 0
@@ -13216,6 +13352,7 @@ GameObject:
   - 114: {fileID: 1102062124}
   - 114: {fileID: 1102062125}
   - 114: {fileID: 1102062126}
+  - 114: {fileID: 1102062127}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -13555,6 +13692,53 @@ MonoBehaviour:
   - path
   - time
   - delay
+  - oncomplete
+  indexes: 00000000000000000100000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 5
+  - 8
+  bools: 
+  strings:
+  - FollowToKitchen
+  - OnComplete
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &1102062127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102062113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: TvToKitchen
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - oncomplete
   indexes: 000000000000000001000000
   metadatas:
   - p
@@ -13563,10 +13747,10 @@ MonoBehaviour:
   ints: 
   floats:
   - 5
-  - 14
   bools: 
   strings:
-  - FollowToKitchen
+  - TvToKitchen
+  - OnComplete
   vector3s: []
   colors: []
   spaces: 
@@ -15293,6 +15477,8 @@ GameObject:
   - 114: {fileID: 1258780096}
   - 114: {fileID: 1258780095}
   - 114: {fileID: 1258780094}
+  - 114: {fileID: 1258780105}
+  - 114: {fileID: 1258780106}
   m_Layer: 0
   m_Name: carl
   m_TagString: Untagged
@@ -15434,13 +15620,9 @@ MonoBehaviour:
   - easetype
   - orienttopath
   - oncomplete
-  - delay
-  - onstartparams
-  indexes: 00000000000000000000000000000000010000000100000002000000
+  indexes: 0000000000000000000000000000000001000000
   metadatas:
   - p
-  - 
-  - 
   - 
   - 
   - 
@@ -15448,12 +15630,10 @@ MonoBehaviour:
   ints: 
   floats:
   - 5
-  - 5
   bools: 01
   strings:
   - KitchenPath
   - kitchenEventEnd
-  - anim.SetBool("isWalking", true);
   vector3s: []
   colors: []
   spaces: 
@@ -15609,6 +15789,97 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+--- !u!114 &1258780105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: TvToKitchenEvent
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  - oncomplete
+  indexes: 00000000000000000100000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 12
+  - 6
+  bools: 
+  strings:
+  - TVtoKitchenAI
+  - kitchenEventEnd
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &1258780106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: KitchenToTvEvent
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - oncomplete
+  indexes: 000000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  ints: 
+  floats:
+  - 8
+  bools: 
+  strings:
+  - KitchenToTvPathAI
+  - tvEventEnd
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1264039694
 GameObject:
   m_ObjectHideFlags: 0
@@ -17166,6 +17437,7 @@ Transform:
   - {fileID: 1362552866}
   - {fileID: 301418291}
   - {fileID: 81011828}
+  - {fileID: 1021179301}
   m_Father: {fileID: 0}
   m_RootOrder: 11
 --- !u!1 &1354573519
@@ -17324,7 +17596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1362552865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19623,6 +19895,8 @@ GameObject:
   - 114: {fileID: 1601672800}
   - 114: {fileID: 1601672801}
   - 114: {fileID: 1601672802}
+  - 114: {fileID: 1601672803}
+  - 114: {fileID: 1601672804}
   m_Layer: 0
   m_Name: PlayerPath
   m_TagString: Untagged
@@ -19717,6 +19991,46 @@ MonoBehaviour:
   - {x: -5.25876713, y: 1.60000002, z: -2.13273191}
   - {x: -1.36378741, y: 1.60000002, z: -.743717432}
   nodeCount: 2
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1601672803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601672797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: TvToKitchen
+  pathColor: {r: .984313726, g: .0313725509, b: .0313725509, a: 1}
+  nodes:
+  - {x: .00758981705, y: 1.60000002, z: -2.96458602}
+  - {x: .00538155437, y: 1.60000002, z: -1.65596294}
+  - {x: -1.36378706, y: 1.60000002, z: -.743717372}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1601672804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601672797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: KitchenToTv
+  pathColor: {r: .980392158, g: .0313725509, b: .0313725509, a: 1}
+  nodes:
+  - {x: -1.36378706, y: 1.60000002, z: -.743717372}
+  - {x: .0053815539, y: 1.60000002, z: -1.65596294}
+  - {x: .00758981705, y: 1.60000002, z: -2.96458602}
+  nodeCount: 3
   initialized: 1
   initialName: New Path 1
 --- !u!1 &1602677556
