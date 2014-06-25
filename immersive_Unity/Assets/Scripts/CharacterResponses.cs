@@ -19,10 +19,13 @@ public class CharacterResponses : MonoBehaviour {
 
 	int choiceCounter;
 	bool isSitting;
+	string currentAiLocation;
 
 	void Start() {
 		anim = GetComponent<Animator>();
 		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
+		currentAiLocation = "default";
+
 		//Player = GameObject.Find("FirstPersonController");
 	}
 
@@ -31,6 +34,8 @@ public class CharacterResponses : MonoBehaviour {
 		isSitting = anim.GetBool("isSitting");
 		print ("isSitting = " + isSitting);
 		print ("ChoiceCounter = " + choiceCounter);
+		print ("Current Location = " + currentAiLocation);
+
 	}
 
 	public void checkResponse(int caseNum){
@@ -39,14 +44,27 @@ public class CharacterResponses : MonoBehaviour {
 		case 1:
 			print ("case1 ACTIVATE!");
 
-			iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-			iTweenEvent.GetEvent(Player,"MoveToTvEvent").Play();
+			//May want to use case inside case statement
+			if (currentAiLocation == "default"){
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				iTweenEvent.GetEvent(Player,"MoveToTvEvent").Play();
 
-			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+				iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+				aiLook.enabled = false;
+				anim.SetBool("isWalking", true);
+				anim.SetBool("interact", false);
+
+				currentAiLocation = "TV";
+			}
+			else if(currentAiLocation == "TV"){
+				//Code to move	
+			}
+
+			/*iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
 			anim.SetBool("isWalking", true);
 			anim.SetBool("interact", false);
-
+			*/
 
 			choiceCounter++;
 			LeaveDialog();
@@ -54,7 +72,8 @@ public class CharacterResponses : MonoBehaviour {
 		
 		case 2:
 			print ("case2 ACTIVATE!");
-
+			iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+			iTweenEvent.GetEvent(Player,"MoveToKitchenEvent").Play();
 
 			if(isSitting == true){
 				anim.SetBool("isSitting", false);

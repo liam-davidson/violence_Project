@@ -13215,6 +13215,7 @@ GameObject:
   - 114: {fileID: 1102062122}
   - 114: {fileID: 1102062124}
   - 114: {fileID: 1102062125}
+  - 114: {fileID: 1102062126}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -13394,7 +13395,7 @@ MonoBehaviour:
   playAutomatically: 1
   delay: 0
   type: 17
-  showIconInInspector: 0
+  showIconInInspector: 1
   keys:
   - delay
   - path
@@ -13526,6 +13527,50 @@ MonoBehaviour:
   colors: []
   spaces: 
   easeTypes: 15000000
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &1102062126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102062113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: MoveToKitchenEvent
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  indexes: 000000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  ints: 
+  floats:
+  - 5
+  - 14
+  bools: 
+  strings:
+  - FollowToKitchen
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
   loopTypes: 
   gameObjects: []
   transforms: []
