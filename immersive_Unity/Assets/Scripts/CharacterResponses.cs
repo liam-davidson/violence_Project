@@ -29,7 +29,7 @@ public class CharacterResponses : MonoBehaviour {
 	void Update(){
 
 		isSitting = anim.GetBool("isSitting");
-
+		print ("isSitting = " + isSitting);
 		print ("ChoiceCounter = " + choiceCounter);
 	}
 
@@ -47,9 +47,6 @@ public class CharacterResponses : MonoBehaviour {
 			anim.SetBool("isWalking", true);
 			anim.SetBool("interact", false);
 
-			/*if(isSitting == true){
-				anim.SetBool("isSitting", false);
-			}*/
 
 			choiceCounter++;
 			LeaveDialog();
@@ -58,9 +55,15 @@ public class CharacterResponses : MonoBehaviour {
 		case 2:
 			print ("case2 ACTIVATE!");
 
+
+			if(isSitting == true){
+				anim.SetBool("isSitting", false);
+			}
+
+
 			iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
 			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
+			//anim.SetBool("isWalking", true);
 
 			choiceCounter++;
 			LeaveDialog();

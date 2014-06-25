@@ -1411,11 +1411,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81011826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.34131169, y: 12.6442232, z: -.794770241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1353605918}
+  m_RootOrder: 3
 --- !u!1 &86087102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,11 +3791,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 301418290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.353053212, y: .524408102, z: -3.87143993}
+  m_LocalPosition: {x: .988258481, y: 13.1686316, z: -4.66621017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1353605918}
+  m_RootOrder: 2
 --- !u!114 &301418292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7425,7 +7425,7 @@ Transform:
   m_LocalScale: {x: .360000014, y: .310000002, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1 &621972721
 GameObject:
   m_ObjectHideFlags: 0
@@ -8002,7 +8002,7 @@ Transform:
   - {fileID: 324117561}
   - {fileID: 988493626}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!95 &646855623
 Animator:
   serializedVersion: 3
@@ -13234,7 +13234,7 @@ Transform:
   m_Children:
   - {fileID: 1602677557}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 10
 --- !u!114 &1102062115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14884,7 +14884,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!82 &1230037828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15269,7 +15269,7 @@ Transform:
   - {fileID: 675855807}
   - {fileID: 1327394749}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
 --- !u!114 &1258780094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15389,9 +15389,13 @@ MonoBehaviour:
   - easetype
   - orienttopath
   - oncomplete
-  indexes: 0000000000000000000000000000000001000000
+  - delay
+  - onstartparams
+  indexes: 00000000000000000000000000000000010000000100000002000000
   metadatas:
   - p
+  - 
+  - 
   - 
   - 
   - 
@@ -15399,10 +15403,12 @@ MonoBehaviour:
   ints: 
   floats:
   - 5
+  - 5
   bools: 01
   strings:
   - KitchenPath
   - kitchenEventEnd
+  - anim.SetBool("isWalking", true);
   vector3s: []
   colors: []
   spaces: 
@@ -16617,7 +16623,7 @@ Transform:
   - {fileID: 873365534}
   - {fileID: 1548240151}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!95 &1329597508
 Animator:
   serializedVersion: 3
@@ -17086,6 +17092,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353000626}
   m_Mesh: {fileID: 4300424, guid: a1eeac7f56af5fc4589424fb40516139, type: 3}
+--- !u!1 &1353605917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1353605918}
+  m_Layer: 0
+  m_Name: Paths
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353605918
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353605917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.34131169, y: -12.6442232, z: .794770241}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1601672799}
+  - {fileID: 1362552866}
+  - {fileID: 301418291}
+  - {fileID: 81011828}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
 --- !u!1 &1354573519
 GameObject:
   m_ObjectHideFlags: 0
@@ -17269,11 +17306,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362552864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.303575695, y: 2.61409092, z: -4.11366463}
+  m_LocalPosition: {x: 1.03773594, y: 15.2583141, z: -4.90843487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1353605918}
+  m_RootOrder: 1
 --- !u!1 &1365984480
 GameObject:
   m_ObjectHideFlags: 0
@@ -19540,6 +19577,7 @@ GameObject:
   - 114: {fileID: 1601672798}
   - 114: {fileID: 1601672800}
   - 114: {fileID: 1601672801}
+  - 114: {fileID: 1601672802}
   m_Layer: 0
   m_Name: PlayerPath
   m_TagString: Untagged
@@ -19559,7 +19597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: PlayerPath
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathColor: {r: 1, g: .0294117928, b: .0294117928, a: 1}
   nodes:
   - {x: -3.79179001, y: 1.60000002, z: -5.66903543}
   - {x: -4.0999999, y: 1.60000002, z: -1.29999995}
@@ -19573,11 +19611,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601672797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.44518614, y: -.852993011, z: -4.30754042}
+  m_LocalPosition: {x: -3.10387444, y: 11.7912302, z: -5.10231066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1353605918}
+  m_RootOrder: 0
 --- !u!114 &1601672800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19590,7 +19628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: SideStep
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathColor: {r: .996078432, g: .0313725509, b: .0313725509, a: 1}
   nodes:
   - {x: -4.0999999, y: 1.60000002, z: -1.29999995}
   - {x: -5.25876713, y: 1.60000002, z: -2.13273239}
@@ -19609,12 +19647,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: FollowToTv
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathColor: {r: .992156863, g: .0313725509, b: .0313725509, a: 1}
   nodes:
   - {x: -5.25711584, y: 1.60000002, z: -2.13413572}
   - {x: -2.26732063, y: 1.60000002, z: -3.52369857}
   - {x: .00758981705, y: 1.60000002, z: -2.96458626}
   nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &1601672802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601672797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: FollowToKitchen
+  pathColor: {r: .988235295, g: .0313725509, b: .0313725509, a: 1}
+  nodes:
+  - {x: -5.25876713, y: 1.60000002, z: -2.13273191}
+  - {x: -1.36378741, y: 1.60000002, z: -.743717432}
+  nodeCount: 2
   initialized: 1
   initialName: New Path 1
 --- !u!1 &1602677556
@@ -24405,7 +24462,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
 --- !u!1 &2028722656
 GameObject:
   m_ObjectHideFlags: 0
