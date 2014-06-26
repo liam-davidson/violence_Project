@@ -12500,7 +12500,7 @@ MonoBehaviour:
   - {x: -4.06087589, y: .5, z: -1.21025252}
   - {x: -2.28982568, y: .5, z: -1.38171482}
   - {x: -1.31663799, y: .5, z: -2.85485029}
-  - {x: .145115137, y: .5, z: -4.08779144}
+  - {x: 0, y: .5, z: -3.8931241}
   nodeCount: 4
   initialized: 1
   initialName: New Path 1
@@ -12564,7 +12564,7 @@ MonoBehaviour:
   - {x: -2.6390965, y: .5, z: 0}
   - {x: -3.60269332, y: .5, z: -2.24097013}
   - {x: -1.21496677, y: .5, z: -3.42628598}
-  - {x: -.209431499, y: .5, z: -2.46136189}
+  - {x: 0, y: .5, z: -3.8931241}
   nodeCount: 5
   initialized: 1
   initialName: New Path 1
@@ -13353,6 +13353,7 @@ GameObject:
   - 114: {fileID: 1102062125}
   - 114: {fileID: 1102062126}
   - 114: {fileID: 1102062127}
+  - 114: {fileID: 1102062128}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -13750,6 +13751,53 @@ MonoBehaviour:
   bools: 
   strings:
   - TvToKitchen
+  - OnComplete
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &1102062128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102062113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: KitchenToTv
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  - oncomplete
+  indexes: 00000000000000000100000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 5
+  - 15
+  bools: 
+  strings:
+  - KitchenToTv
   - OnComplete
   vector3s: []
   colors: []
@@ -15523,15 +15571,17 @@ MonoBehaviour:
   - time
   - oncomplete
   - orienttopath
-  indexes: 00000000000000000100000000000000
+  - easetype
+  indexes: 0000000000000000010000000000000000000000
   metadatas:
   - p
   - 
   - 
   - 
+  - 
   ints: 
   floats:
-  - 5
+  - 1
   bools: 01
   strings:
   - ChairPath
@@ -15539,7 +15589,7 @@ MonoBehaviour:
   vector3s: []
   colors: []
   spaces: 
-  easeTypes: 
+  easeTypes: 15000000
   loopTypes: 
   gameObjects: []
   transforms: []
@@ -15810,9 +15860,13 @@ MonoBehaviour:
   - time
   - delay
   - oncomplete
-  indexes: 00000000000000000100000001000000
+  - easetype
+  - orienttopath
+  indexes: 000000000000000001000000010000000000000000000000
   metadatas:
   - p
+  - 
+  - 
   - 
   - 
   - 
@@ -15820,14 +15874,14 @@ MonoBehaviour:
   floats:
   - 12
   - 6
-  bools: 
+  bools: 01
   strings:
   - TVtoKitchenAI
   - kitchenEventEnd
   vector3s: []
   colors: []
   spaces: 
-  easeTypes: 
+  easeTypes: 15000000
   loopTypes: 
   gameObjects: []
   transforms: []
@@ -15856,22 +15910,29 @@ MonoBehaviour:
   - path
   - time
   - oncomplete
-  indexes: 000000000000000001000000
+  - delay
+  - orienttopath
+  - easetype
+  indexes: 000000000000000001000000010000000000000000000000
   metadatas:
   - p
   - 
   - 
+  - 
+  - 
+  - 
   ints: 
   floats:
-  - 8
-  bools: 
+  - 12
+  - 2
+  bools: 01
   strings:
   - KitchenToTvPathAI
   - tvEventEnd
   vector3s: []
   colors: []
   spaces: 
-  easeTypes: 
+  easeTypes: 15000000
   loopTypes: 
   gameObjects: []
   transforms: []

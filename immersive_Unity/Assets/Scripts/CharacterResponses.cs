@@ -54,21 +54,30 @@ public class CharacterResponses : MonoBehaviour {
 				anim.SetBool("isWalking", true);
 				anim.SetBool("interact", false);
 
-				currentAiLocation = "TV";
+				//currentAiLocation = "TV";
 			}
 
 			else if(currentAiLocation == "Kitchen"){
-				iTweenEvent.GetEvent(AI,"KitchenToTvEvent").Play();
-				aiLook.enabled = false;
+
 				anim.SetBool("interact", false);
+
+				iTweenEvent.GetEvent(AI,"KitchenToTvEvent").Play();
+				iTweenEvent.GetEvent(Player,"KitchenToTv").Play();
+				aiLook.enabled = false;
 				anim.SetBool("isWalking", true);
-				//anim.SetBool("interact", false);
-				//Code to move	
+				anim.SetBool("interact", false);
+				//currentAiLocation = "TV";
+
+
+				//Code to move
+
 			}
 
 			else if(currentAiLocation == "TV"){
 				//Code to move	
 			}
+
+			currentAiLocation = "TV";
 
 			/*iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			aiLook.enabled = false;
@@ -84,7 +93,7 @@ public class CharacterResponses : MonoBehaviour {
 			print ("case2 ACTIVATE!");
 
 
-		if(isSitting == true){
+			if(isSitting == true){
 				anim.SetBool("isSitting", false);
 			}
 
