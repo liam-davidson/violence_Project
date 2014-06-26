@@ -113,9 +113,11 @@ public class CharacterResponses : MonoBehaviour {
 				iTweenEvent.GetEvent(Player,"TvToKitchen").Play();
 
 				iTweenEvent.GetEvent(AI,"TvToKitchenEvent").Play();
-				anim.SetBool("isWalking", true);
 
 				aiLook.enabled = false;
+				anim.SetBool("isWalking", true);
+
+
 
 				currentAiLocation = "Kitchen";
 			}

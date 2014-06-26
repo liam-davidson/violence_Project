@@ -51,7 +51,8 @@ public class CharacterInteract : MonoBehaviour {
 	}
 
 	void Update(){
-		isSitting = anim.GetBool ("isSitting");
+		//isSitting = anim.GetBool ("isSitting");
+
 		/*Vector3 point = targetFollow.position;
 		Vector3 v3Dir = targetFollow.position - transform.position;
 
@@ -82,8 +83,9 @@ public class CharacterInteract : MonoBehaviour {
 			rotationReset = true;
 
 			//Now that the object has been used, it must always face towards the player.
-			if(targetFollow != null && isSitting != true){
-              		
+			//if(targetFollow != null && isSitting != true){
+			if(targetFollow != null){
+
 				 	var lookPos = targetFollow.position - transform.position;
 					lookPos.y = 0;
 					
