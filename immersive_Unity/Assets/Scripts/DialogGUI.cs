@@ -2,8 +2,7 @@
 using System.Collections;
 
 [System.Serializable]
-public class options
-{
+public class options {
 	public string option1;
 	public string option2;
 	public string option3;
@@ -14,9 +13,8 @@ public class options
 	public string option8;
 	public string option9;
 }
-
-public class DialogGUI : MonoBehaviour {
-
+[System.Serializable]
+public class radialMenu {
 	public GameObject controllerArrow;
 	public GameObject Option1;
 	public GameObject Option2;
@@ -28,6 +26,9 @@ public class DialogGUI : MonoBehaviour {
 	public GameObject Option8;
 	public GameObject Option9;
 
+}
+[System.Serializable]
+public class radialMat {
 	public Material off_1;
 	public Material off_2;
 	public Material off_3;
@@ -37,7 +38,11 @@ public class DialogGUI : MonoBehaviour {
 	public Material off_7;
 	public Material off_8;
 	public Material off_9;
+	
+}
 
+public class DialogGUI : MonoBehaviour {
+	
 	public float y;
 	public float x;
 	
@@ -56,6 +61,8 @@ public class DialogGUI : MonoBehaviour {
 	private Vector3 scale;
 
 	public options dialogMenu;
+	public radialMenu radialMenuObj;
+	public radialMat radialMenuMat;
 	public CharacterResponses response;
 	public Vector3 lookTarget;
 	
@@ -91,23 +98,21 @@ public class DialogGUI : MonoBehaviour {
 		v3.y = 90;
 		v3.z = -90;
 
-		controllerArrow.transform.localEulerAngles = v3;
+		radialMenuObj.controllerArrow.transform.localEulerAngles = v3;
 
-		//Debug.Log (test);
-
-		Option1.renderer.material = off_1;
-		Option2.renderer.material = off_2;
-		Option3.renderer.material = off_3;
-		Option4.renderer.material = off_4;
-		Option5.renderer.material = off_5;
-		Option6.renderer.material = off_6;
-		Option7.renderer.material = off_7;
-		Option8.renderer.material = off_8;
-		Option9.renderer.material = off_9;
+		radialMenuObj.Option1.renderer.material = radialMenuMat.off_1;
+		radialMenuObj.Option2.renderer.material = radialMenuMat.off_2;
+		radialMenuObj.Option3.renderer.material = radialMenuMat.off_3;
+		radialMenuObj.Option4.renderer.material = radialMenuMat.off_4;
+		radialMenuObj.Option5.renderer.material = radialMenuMat.off_5;
+		radialMenuObj.Option6.renderer.material = radialMenuMat.off_6;
+		radialMenuObj.Option7.renderer.material = radialMenuMat.off_7;
+		radialMenuObj.Option8.renderer.material = radialMenuMat.off_8;
+		radialMenuObj.Option9.renderer.material = radialMenuMat.off_9;
 
 		if (test < 72 && test > 36) {
 			//Option1.renderer.enabled = false;
-			Option1.renderer.material.color = Color.red;
+			radialMenuObj.Option1.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test");
 				responseNum = 1;
@@ -115,7 +120,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < 36 && test > 0) {
-			Option2.renderer.material.color = Color.red;
+			radialMenuObj.Option2.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test2");
 				responseNum = 2;
@@ -123,7 +128,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < 0 && test > -36) {
-			Option3.renderer.material.color = Color.red;
+			radialMenuObj.Option3.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test3");
 				responseNum = 3;
@@ -131,7 +136,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < -36 && test > -72) {
-			Option4.renderer.material.color = Color.red;
+			radialMenuObj.Option4.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test4");
 				responseNum = 4;
@@ -139,7 +144,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < -72 && test > -108) {
-			Option5.renderer.material.color = Color.red;
+			radialMenuObj.Option5.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test5");
 				responseNum = 5;
@@ -147,7 +152,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < -108 && test > -138) {
-			Option6.renderer.material.color = Color.red;
+			radialMenuObj.Option6.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test6");
 				responseNum = 6;
@@ -155,7 +160,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < -144 && test > -179) {
-			Option7.renderer.material.color = Color.red;
+			radialMenuObj.Option7.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test7");
 				responseNum = 7;
@@ -163,7 +168,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < 179 && test > 144) {
-			Option8.renderer.material.color = Color.red;
+			radialMenuObj.Option8.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test8");
 				responseNum = 8;
@@ -171,7 +176,7 @@ public class DialogGUI : MonoBehaviour {
 			}
 		}
 		if (test < 144 && test > 108) {
-			Option9.renderer.material.color = Color.red;
+			radialMenuObj.Option9.renderer.material.color = Color.red;
 			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				changeDescription("test9");
 				responseNum = 9;
