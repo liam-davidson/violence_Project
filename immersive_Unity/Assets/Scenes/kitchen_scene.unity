@@ -13485,11 +13485,9 @@ MonoBehaviour:
   keys:
   - path
   - time
-  - oncomplete
-  indexes: 000000000000000001000000
+  indexes: 0000000000000000
   metadatas:
   - p
-  - 
   - 
   ints: 
   floats:
@@ -13497,7 +13495,6 @@ MonoBehaviour:
   bools: 
   strings:
   - TvToKitchen
-  - OnComplete
   vector3s: []
   colors: []
   spaces: 
@@ -16368,16 +16365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b62f795192d9244a3f1101723bf58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  y: 0
-  x: 0
-  centerVector: {x: 0, y: 0}
-  stickVector: {x: 0, y: 0}
-  v3: {x: 0, y: 0, z: 0}
-  text: 
   angle: 0
-  test: 0
-  deltaX: 0
-  deltaY: 0
   dialogMenu:
     option1: 'Report it '
     option2: Talk it out

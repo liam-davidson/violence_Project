@@ -43,7 +43,22 @@ public class radialMat {
 
 public class DialogGUI : MonoBehaviour {
 	
-	public float y;
+	private float y;
+	private float x;
+	
+	private Vector2 centerVector;
+	private Vector2 stickVector;
+	private Vector3 v3;
+	
+	private string text;
+	public float angle;
+	
+	private float test;
+	private float deltaX;
+	private float deltaY;
+
+
+	/*public float y;
 	public float x;
 	
 	public Vector2 centerVector;
@@ -55,7 +70,7 @@ public class DialogGUI : MonoBehaviour {
 	
 	public float test;
 	public float deltaX;
-	public float deltaY;
+	public float deltaY;*/
 
 	private CharacterInteract state;
 	private Vector3 scale;
