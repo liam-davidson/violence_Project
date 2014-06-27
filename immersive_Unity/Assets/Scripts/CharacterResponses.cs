@@ -20,12 +20,13 @@ public class CharacterResponses : MonoBehaviour {
 	int choiceCounter;
 	bool isSitting;
 	string currentAiLocation;
+	int maxChoiceNum;
 
 	void Start() {
 		anim = GetComponent<Animator>();
 		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 		currentAiLocation = "default";
-
+		maxChoiceNum = 2;
 		//Player = GameObject.Find("FirstPersonController");
 	}
 
@@ -248,14 +249,10 @@ public class CharacterResponses : MonoBehaviour {
 		anim.SetBool("isSitting", true);
 		eventEnd ();
 	}
-
-	void endInteract(){
-		anim.SetBool("i", false);
-	}
-
+	
 	void eventEnd(){
 		
-		if (choiceCounter == 4){
+		if (choiceCounter == maxChoiceNum){
 			iTween.CameraFadeAdd ();
 			iTween.CameraFadeFrom (1,1);
 			//Application.Quit();

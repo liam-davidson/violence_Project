@@ -15,6 +15,7 @@ public class options {
 }
 [System.Serializable]
 public class radialMenu {
+	public GameObject radialBackground;
 	public GameObject controllerArrow;
 	public GameObject Option1;
 	public GameObject Option2;
@@ -90,6 +91,19 @@ public class DialogGUI : MonoBehaviour {
 	void Start(){
 		state = gameObject.GetComponent<CharacterInteract>();
 		responseNum = 0;
+
+		radialMenuObj.controllerArrow.renderer.enabled = true;
+		radialMenuObj.radialBackground.renderer.enabled = true;
+		radialMenuObj.Option1.renderer.enabled = true;
+		radialMenuObj.Option2.renderer.enabled = true;
+		radialMenuObj.Option3.renderer.enabled = true;
+		radialMenuObj.Option4.renderer.enabled = true;
+		radialMenuObj.Option5.renderer.enabled = true;
+		radialMenuObj.Option6.renderer.enabled = true;
+		radialMenuObj.Option7.renderer.enabled = true;
+		radialMenuObj.Option8.renderer.enabled = true;
+		radialMenuObj.Option9.renderer.enabled = true;
+
 	}
 
 	void Update () {
