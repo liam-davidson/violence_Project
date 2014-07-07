@@ -11,7 +11,6 @@ public class CharacterResponses : MonoBehaviour {
 	public DialogGUI dialogue;
 	public Transform targetLook;
 
-
 	private Animator anim;
 	private Animator animTV;
 	private Animator animKitchen;
@@ -44,7 +43,8 @@ public class CharacterResponses : MonoBehaviour {
 		
 		case 1:
 			print ("case1 ACTIVATE!");
-
+			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
+			GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
 			//May want to use case inside case statement
 			if (currentAiLocation == "default"){
 				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
