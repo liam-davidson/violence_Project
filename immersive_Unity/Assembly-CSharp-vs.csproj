@@ -83,6 +83,7 @@
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Diffuse.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Bump.shader" />
      <None Include="Assets\iTweenEditor\README.txt" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent.shader" />
