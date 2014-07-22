@@ -7,6 +7,7 @@ public class AILogic : MonoBehaviour {
 	bool AiMoving; 
 	// Use this for initialization
 	void Start () {
+		state = gameObject.GetComponent<CharacterInteract>();
 		anim = GetComponent<Animator>();
 	}
 	
