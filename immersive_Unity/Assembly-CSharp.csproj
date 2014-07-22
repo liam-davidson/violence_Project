@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\LoadFade.cs" />
+     <Compile Include="Assets\Scripts\AILogic.cs" />
      <Compile Include="Assets\Scripts\BotControlScript.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses.cs" />

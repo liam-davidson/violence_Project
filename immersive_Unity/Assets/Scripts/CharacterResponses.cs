@@ -9,7 +9,7 @@ public class CharacterResponses : MonoBehaviour {
 	public FocusOnPlayer aiLook;
 	public GameObject AI;
 	public DialogGUI dialogue;
-	public Transform targetLook;
+	//public Transform targetLook;
 
 	private Animator anim;
 	private Animator animTV;
@@ -23,7 +23,7 @@ public class CharacterResponses : MonoBehaviour {
 
 	void Start() {
 		anim = GetComponent<Animator>();
-		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
+		//animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 		currentAiLocation = "default";
 		maxChoiceNum = 2;
 		//Player = GameObject.Find("FirstPersonController");
@@ -242,9 +242,8 @@ public class CharacterResponses : MonoBehaviour {
 	}
 
 	void chairEventEnd(){
-		//Vector3 tempPos = new Vector3(0,targetLook.position.y,0);
-		//transform.LookAt (tempPos);
-		transform.LookAt(new Vector3(targetLook.position.x, transform.position.y, targetLook.position.z));
+
+		//transform.LookAt(new Vector3(targetLook.position.x, transform.position.y, targetLook.position.z));
 	
 		anim.SetBool("isSitting", true);
 		eventEnd ();
@@ -260,6 +259,7 @@ public class CharacterResponses : MonoBehaviour {
 		}
 		
 		anim.SetBool("isWalking", false);
+		state.itemUseable = false;
 		//Uncomment to let the AI look at you when he's done walking
 		//aiLook.enabled = true;
 	}
