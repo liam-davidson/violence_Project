@@ -1,15 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterResponses.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterInteract_Scene_05.cs">
     <Files>
-      <File FileName="Assets\Scripts\CharacterInteract.cs" Line="40" Column="20" />
-      <File FileName="Assets\LoadFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DialogGUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterResponses.cs" Line="241" Column="15" />
-      <File FileName="Assets\Scripts\PlayerPathController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AILogic.cs" Line="31" Column="7" />
+      <File FileName="Assets\Scripts\CharacterResponses_Scene_05.cs" Line="53" Column="18" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="34" Column="1" />
+      <File FileName="Assets\Scripts\DialogGUI_Scene_05.cs" Line="57" Column="21" />
+      <File FileName="Assets\Scripts\CharacterInteract_Scene_05.cs" Line="84" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

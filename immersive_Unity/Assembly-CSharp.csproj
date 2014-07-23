@@ -50,8 +50,11 @@
      <Compile Include="Assets\Scripts\AILogic.cs" />
      <Compile Include="Assets\Scripts\BotControlScript.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract.cs" />
+     <Compile Include="Assets\Scripts\CharacterInteract_Scene_05.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses.cs" />
+     <Compile Include="Assets\Scripts\CharacterResponses_Scene_05.cs" />
      <Compile Include="Assets\Scripts\DialogGUI.cs" />
+     <Compile Include="Assets\Scripts\DialogGUI_Scene_05.cs" />
      <Compile Include="Assets\Scripts\FocusOnPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MoveToWaypoint.cs" />
