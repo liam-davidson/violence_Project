@@ -31861,9 +31861,11 @@ MonoBehaviour:
   - orienttopath
   - time
   - easetype
-  indexes: 00000000000000000000000000000000
+  - oncomplete
+  indexes: 0000000000000000000000000000000001000000
   metadatas:
   - p
+  - 
   - 
   - 
   - 
@@ -31873,6 +31875,7 @@ MonoBehaviour:
   bools: 01
   strings:
   - antag_leave
+  - eventEnd
   vector3s: []
   colors: []
   spaces: 
@@ -31908,11 +31911,9 @@ MonoBehaviour:
   - time
   - easetype
   - delay
-  - oncomplete
-  indexes: 000000000000000000000000000000000100000001000000
+  indexes: 0000000000000000000000000000000001000000
   metadatas:
   - p
-  - 
   - 
   - 
   - 
@@ -31924,7 +31925,6 @@ MonoBehaviour:
   bools: 01
   strings:
   - antag_approach
-  - eventEnd
   vector3s: []
   colors: []
   spaces: 
@@ -38799,7 +38799,7 @@ MonoBehaviour:
   nodes:
   - {x: .784231961, y: .00999999978, z: -.523077011}
   - {x: -.123948246, y: .00999999978, z: -.442376792}
-  - {x: -.984947324, y: .00999999978, z: -.419567168}
+  - {x: -1.0150187, y: .00999999978, z: -.433002055}
   nodeCount: 3
   initialized: 1
   initialName: New Path 1
@@ -48698,6 +48698,7 @@ GameObject:
   - 81: {fileID: 1761333175}
   - 114: {fileID: 1761333174}
   - 114: {fileID: 1761333173}
+  - 45: {fileID: 1761333180}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -48815,6 +48816,14 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!45 &1761333180
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761333171}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d4d16ca3d56fb7142a32d49bbd323836, type: 2}
 --- !u!1 &1761946081
 GameObject:
   m_ObjectHideFlags: 0
