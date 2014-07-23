@@ -19830,7 +19830,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 715454957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db33e6442d5f5c48b72d2ec591530c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9809e87c0f7e92541bec86f98e9197c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &715454967
@@ -31818,6 +31818,7 @@ GameObject:
   - 114: {fileID: 1176972536}
   - 114: {fileID: 1176972534}
   - 114: {fileID: 1176972537}
+  - 114: {fileID: 1176972531}
   m_Layer: 0
   m_Name: carl
   m_TagString: Untagged
@@ -31839,6 +31840,51 @@ Transform:
   - {fileID: 79514575}
   - {fileID: 1651873066}
   m_Father: {fileID: 0}
+--- !u!114 &1176972531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176972529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: antag_leave
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - orienttopath
+  - time
+  - easetype
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - p
+  - 
+  - 
+  - 
+  ints: 
+  floats:
+  - 10
+  bools: 01
+  strings:
+  - antag_leave
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!114 &1176972534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31862,9 +31908,11 @@ MonoBehaviour:
   - time
   - easetype
   - delay
-  indexes: 0000000000000000000000000000000001000000
+  - oncomplete
+  indexes: 000000000000000000000000000000000100000001000000
   metadatas:
   - p
+  - 
   - 
   - 
   - 
@@ -31876,6 +31924,7 @@ MonoBehaviour:
   bools: 01
   strings:
   - antag_approach
+  - eventEnd
   vector3s: []
   colors: []
   spaces: 
@@ -31931,7 +31980,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176972529}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2b62f795192d9244a3f1101723bf58f, type: 3}
+  m_Script: {fileID: 11500000, guid: f60990e8aaf0f20419f42fd89db32307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogMenu:
@@ -31976,12 +32025,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1176972529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97268134e258bcc49b6abd09a7f2e0c3, type: 3}
+  m_Script: {fileID: 11500000, guid: fafc173f0a855e24f8a0aebea61cbfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Material:
-    defaultMaterial: {fileID: 2100000, guid: 704e9eb1caeb4a545bf62e54adc28f89, type: 2}
-    glowMaterial: {fileID: 2100000, guid: 4ef3fe19ab6c1124ca4df1ea5102e0b4, type: 2}
+    defaultMaterial: {fileID: 0}
+    glowMaterial: {fileID: 0}
   targetFollow: {fileID: 715454958}
   target: {fileID: 1803421446}
   itemUseable: 1
@@ -38715,6 +38764,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1431770095}
   - 114: {fileID: 1431770100}
+  - 114: {fileID: 1431770096}
   m_Layer: 0
   m_Name: AiPath
   m_TagString: Untagged
@@ -38733,6 +38783,26 @@ Transform:
   m_LocalScale: {x: .838986456, y: .838986456, z: .838986456}
   m_Children: []
   m_Father: {fileID: 481294508}
+--- !u!114 &1431770096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431770094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: antag_leave
+  pathColor: {r: 1, g: .147058845, b: .905882299, a: 1}
+  nodes:
+  - {x: .784231961, y: .00999999978, z: -.523077011}
+  - {x: -.123948246, y: .00999999978, z: -.442376792}
+  - {x: -.984947324, y: .00999999978, z: -.419567168}
+  nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
 --- !u!114 &1431770100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38750,8 +38820,8 @@ MonoBehaviour:
   nodes:
   - {x: -.926400542, y: .00999999978, z: -1.31535685}
   - {x: -.659841239, y: .00999999978, z: -.954542994}
-  - {x: -.354596257, y: 0, z: -.539836228}
-  - {x: .78527689, y: 0, z: -.521402359}
+  - {x: -.354596257, y: .00999999978, z: -.539836228}
+  - {x: .78527689, y: .00999999978, z: -.521402359}
   nodeCount: 4
   initialized: 1
   initialName: New Path 1

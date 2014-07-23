@@ -49,13 +49,16 @@
      <Compile Include="Assets\LoadFade.cs" />
      <Compile Include="Assets\Scripts\BotControlScript.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract.cs" />
+     <Compile Include="Assets\Scripts\CharacterInteract_Scene_3.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_3.cs" />
      <Compile Include="Assets\Scripts\DialogGUI.cs" />
+     <Compile Include="Assets\Scripts\DialogGUI_Scene_3.cs" />
      <Compile Include="Assets\Scripts\FocusOnPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MoveToWaypoint.cs" />
      <Compile Include="Assets\Scripts\PlayerPathController.cs" />
+     <Compile Include="Assets\Scripts\PlayerPathController_Scene_3.cs" />
      <Compile Include="Assets\Scripts\SmoothLook.cs" />
      <Compile Include="Assets\Scripts\SmoothLook1.cs" />
      <Compile Include="Assets\Scripts\Splines\UniformBSpline.cs" />

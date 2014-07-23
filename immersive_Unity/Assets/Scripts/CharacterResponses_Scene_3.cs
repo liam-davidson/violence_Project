@@ -5,10 +5,10 @@ using UnityEngine;
 using System.Collections;
 
 public class CharacterResponses_Scene_3 : MonoBehaviour {
-	public CharacterInteract state;
+	public CharacterInteract_Scene_3 state;
 	public FocusOnPlayer aiLook;
 	public GameObject AI;
-	public DialogGUI dialogue;
+	public DialogGUI_Scene_3 dialogue;
 	public Transform targetLook;
 
 	private Animator anim;
@@ -23,7 +23,7 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 
 	void Start() {
 		anim = GetComponent<Animator>();
-		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
+		//animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 		currentAiLocation = "default";
 		maxChoiceNum = 2;
 		//Player = GameObject.Find("FirstPersonController");
@@ -32,9 +32,9 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 	void Update(){
 
 		isSitting = anim.GetBool("isSitting");
-		print ("isSitting = " + isSitting);
-		print ("ChoiceCounter = " + choiceCounter);
-		print ("Current Location = " + currentAiLocation);
+		//print ("isSitting = " + isSitting);
+		//print ("ChoiceCounter = " + choiceCounter);
+		//print ("Current Location = " + currentAiLocation);
 
 	}
 
@@ -43,7 +43,11 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		
 		case 1:
 			print ("case1 ACTIVATE!");
-			
+
+			iTweenEvent.GetEvent(AI,"antag_leave").Play();
+			aiLook.enabled = false;
+			anim.SetBool("isWalking", true);
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
@@ -132,20 +136,6 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		AddToFile();
 
 		print("Exited Dialog!");
-	}
-
-	void tvEventEnd(){
-
-		anim.SetBool("isWalking", false);
-		eventEnd ();
-		//anim.SetBool("interact", true);
-		/*if(anim.GetFloat("interactTime") == 0.12){
-			animTV.SetBool("isTVOn", true);
-			anim.SetBool("interact", false);
-		}*/
-		animTV.SetBool("isTVOn", true);
-		iTweenEvent.GetEvent(AI,"SitEvent").Play();
-		anim.SetBool("isWalking", true);
 	}
 
 	void kitchenEventEnd(){
