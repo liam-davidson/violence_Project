@@ -89,20 +89,7 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 		radialMenuObj.Option7.renderer.enabled = false;
 		radialMenuObj.Option8.renderer.enabled = false;
 		radialMenuObj.Option9.renderer.enabled = false;
-
-
-		/*radialMenuObj.controllerArrow.renderer.enabled = true;
-		radialMenuObj.radialBackground.renderer.enabled = true;
-		radialMenuObj.Option1.renderer.enabled = true;
-		radialMenuObj.Option2.renderer.enabled = true;
-		radialMenuObj.Option3.renderer.enabled = true;
-		radialMenuObj.Option4.renderer.enabled = true;
-		radialMenuObj.Option5.renderer.enabled = true;
-		radialMenuObj.Option6.renderer.enabled = true;
-		radialMenuObj.Option7.renderer.enabled = true;
-		radialMenuObj.Option8.renderer.enabled = true;
-		radialMenuObj.Option9.renderer.enabled = true;*/
-
+	
 	}
 
 	void Update () {

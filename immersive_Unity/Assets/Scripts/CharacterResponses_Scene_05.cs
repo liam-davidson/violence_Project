@@ -43,12 +43,12 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		
 		case 1:
 			print ("case1 ACTIVATE!");
-			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
-			GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
+			//GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
+			//GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
 			//May want to use case inside case statement
 
 			if (currentAiLocation == "default"){
-
+				
 				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
 				anim.SetBool("isWalking", true);
 				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
@@ -57,12 +57,26 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 			else if (currentAiLocation == "TV"){
 				//Do nothing
 			}
+
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
+
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
 			LeaveDialog();
@@ -71,12 +85,36 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 3:
 			print ("case3 ACTIVATE!");
 
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 		
 		case 4:
 			print ("case4 ACTIVATE!");
+
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
 			LeaveDialog();
@@ -85,12 +123,36 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 5:
 			print ("case5 ACTIVATE!");
 
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 			
 		case 6:
 			print ("case6 ACTIVATE!");
+
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
 			LeaveDialog();
@@ -99,6 +161,18 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 7:
 			print ("case7 ACTIVATE!");
 
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
@@ -106,12 +180,34 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 8:
 			print ("case8 ACTIVATE!");
 
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 
 		case 9:
 			print ("case9 ACTIVATE!");
+
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
 
 			choiceCounter++;
 			LeaveDialog();
