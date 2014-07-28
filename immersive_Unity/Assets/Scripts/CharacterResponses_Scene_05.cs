@@ -47,52 +47,22 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 			GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
 			//May want to use case inside case statement
 
-			iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-			anim.SetBool("isWalking", true);
-			iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+			if (currentAiLocation == "default"){
+
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
 			choiceCounter++;
 			LeaveDialog();
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
-
-
-			if(isSitting == true){
-				anim.SetBool("isSitting", false);
-			}
-
-			if (currentAiLocation == "default"){
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				iTweenEvent.GetEvent(Player,"MoveToKitchenEvent").Play();
-
-				iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
-
-				anim.SetBool("isWalking", true);
-
-				aiLook.enabled = false;
-
-				currentAiLocation = "Kitchen";
-			}
-			else if (currentAiLocation == "TV"){
-				iTweenEvent.GetEvent(Player,"TvToKitchen").Play();
-
-				iTweenEvent.GetEvent(AI,"TvToKitchenEvent").Play();
-
-				aiLook.enabled = false;
-				anim.SetBool("isWalking", true);
-
-
-
-				currentAiLocation = "Kitchen";
-			}
-			else if (currentAiLocation == "Kitchen"){
-				//Do nothing since you're already there
-			}
-
-			//iTweenEvent.GetEvent(AI,"KitchenPathEvent").Play();
-			//aiLook.enabled = false;
-			//anim.SetBool("isWalking", true);
 
 			choiceCounter++;
 			LeaveDialog();
@@ -122,10 +92,6 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 6:
 			print ("case6 ACTIVATE!");
 
-			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
-			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
-
 			choiceCounter++;
 			LeaveDialog();
 			break;	
@@ -133,20 +99,12 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		case 7:
 			print ("case7 ACTIVATE!");
 
-			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
-			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
-
 			choiceCounter++;
 			LeaveDialog();
 			break;
 			
 		case 8:
 			print ("case8 ACTIVATE!");
-
-			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
-			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
 
 			choiceCounter++;
 			LeaveDialog();

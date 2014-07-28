@@ -24,6 +24,7 @@ public class CharacterInteract_Scene_05 : MonoBehaviour {
 	
 	private Quaternion localRotation;
 
+
 	//private float maxHeadRot, maxSpineRot;
 	//public float smooth = 0.3F;
 	//public float distance = 5.0F;
@@ -34,6 +35,8 @@ public class CharacterInteract_Scene_05 : MonoBehaviour {
 	Quaternion saveRotation;
 		
 	bool rotationReset = false;
+	//bool used to check if the children of radial_background need to be shown
+	bool hideMenu = false;
 	int damp = 5;
 
 	void Start(){
@@ -76,6 +79,11 @@ public class CharacterInteract_Scene_05 : MonoBehaviour {
 
 			GetComponent<DialogGUI_Scene_05>().enabled = true;
 
+			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = true;
+			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = true;
+			hideMenu = false;
+			ToggleMenu();
+
 			GameObject.FindWithTag("MainCamera").GetComponent<MouseLook>().enabled = false;
 			GameObject.FindWithTag("Player").GetComponent<SmoothLook>().enabled = true;
 			GameObject.FindWithTag("Player").GetComponent<MouseLook>().enabled = false;
@@ -99,6 +107,12 @@ public class CharacterInteract_Scene_05 : MonoBehaviour {
 		else if(rotationReset){
 		
 			GetComponent<DialogGUI_Scene_05>().enabled = false;
+
+			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
+			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = false;
+			hideMenu = true;
+			ToggleMenu();
+
 
 			GameObject.FindWithTag("MainCamera").GetComponent<MouseLook>().enabled = true;
 			GameObject.FindWithTag("Player").GetComponent<MouseLook>().enabled = true;
@@ -131,5 +145,23 @@ public class CharacterInteract_Scene_05 : MonoBehaviour {
 				itemUseable = false; 
 			}
 		}
-	}	
+	}
+
+	void ToggleMenu(){
+		Component[] meshRenderers;
+		meshRenderers = GameObject.Find ("radial_background").GetComponentsInChildren <MeshRenderer>();
+		if(hideMenu == false){
+			foreach (MeshRenderer menuRend in meshRenderers) { 
+				menuRend.enabled = true; 
+			}
+		}
+
+		else if(hideMenu == true){
+			foreach (MeshRenderer menuRend in meshRenderers) { 
+				menuRend.enabled = false; 
+			}
+		}
+		//GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
+		//GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = false;
+	}
 }

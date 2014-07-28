@@ -78,7 +78,20 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 		response = GetComponent<CharacterResponses_Scene_05>();
 		responseNum = 0;
 
-		radialMenuObj.controllerArrow.renderer.enabled = true;
+		radialMenuObj.controllerArrow.renderer.enabled = false;
+		radialMenuObj.radialBackground.renderer.enabled = false;
+		radialMenuObj.Option1.renderer.enabled = false;
+		radialMenuObj.Option2.renderer.enabled = false;
+		radialMenuObj.Option3.renderer.enabled = false;
+		radialMenuObj.Option4.renderer.enabled = false;
+		radialMenuObj.Option5.renderer.enabled = false;
+		radialMenuObj.Option6.renderer.enabled = false;
+		radialMenuObj.Option7.renderer.enabled = false;
+		radialMenuObj.Option8.renderer.enabled = false;
+		radialMenuObj.Option9.renderer.enabled = false;
+
+
+		/*radialMenuObj.controllerArrow.renderer.enabled = true;
 		radialMenuObj.radialBackground.renderer.enabled = true;
 		radialMenuObj.Option1.renderer.enabled = true;
 		radialMenuObj.Option2.renderer.enabled = true;
@@ -88,7 +101,7 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 		radialMenuObj.Option6.renderer.enabled = true;
 		radialMenuObj.Option7.renderer.enabled = true;
 		radialMenuObj.Option8.renderer.enabled = true;
-		radialMenuObj.Option9.renderer.enabled = true;
+		radialMenuObj.Option9.renderer.enabled = true;*/
 
 	}
 
@@ -211,131 +224,7 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 			}
 		}
 	}
-
-	/*
-	void OnGUI(){
-
-		scale.x = Screen.width / originalWidth;
-		scale.y = Screen.height / originalHeight;
-		scale.z = 1;
-
-		GUI.matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, scale);
-
-		var guiMat = GUI.matrix;
-
-		var halfWidth = Screen.width/2;
-
-		var buttonWidth = 150;
-		var buttonHeight = 50;
-
-		float groupWidth = 580.0f;
-		float groupHeight = 280.0f;
-
-		//*****************************************
-		//TODO change if statements to Statemachine
-		//*****************************************
-
-		GUIStyle guiSpacing = new GUIStyle (GUI.skin.button);
-		guiSpacing.padding.bottom = 10;
-		guiSpacing.padding.top = 10;
-
-		GUI.BeginGroup (new Rect (halfWidth - groupWidth/2, Screen.height - groupHeight, groupWidth, groupHeight));
-
-		GUI.Box (new Rect (0,0,580,280),"");
-		#region Button Options
-		//TODO remove magic number button position
-		//replace with positionH + 10
-
-
-		//TODO refrence other script in if statements, pass a var to them who's value will be
-		//used as the switch for a case statement. These cases will contain the Ai reactions.
-		if (GUI.Button (new Rect (50, 40, buttonWidth, buttonHeight), dialogMenu.option1, guiSpacing)) {
-			
-			print("Button Clicked!");
-			changeDescription("test");
-			responseNum = 1;
-			response.checkResponse(responseNum);
-		}
-
-		if (GUI.Button (new Rect (370, 40, buttonWidth, buttonHeight), dialogMenu.option2, guiSpacing)) {
-			
-			print("Button Clicked!");
-			changeDescription("test2");
-			responseNum = 2;
-			response.checkResponse(responseNum);
-		}
-		if (GUI.Button (new Rect (10, 100, buttonWidth, buttonHeight), dialogMenu.option3)) {
-			
-			print("Button Clicked!");
-			changeDescription("test3");
-			responseNum = 3;
-			response.checkResponse(responseNum);
-		}
-		
-		if (GUI.Button (new Rect (10, 160, buttonWidth, buttonHeight), dialogMenu.option4)) {
-			
-			print("Button Clicked!");
-			changeDescription("test4");	
-			responseNum = 4;
-			response.checkResponse(responseNum);
-		}
-
-		if (GUI.Button (new Rect (420, 100, buttonWidth, buttonHeight), dialogMenu.option5)) {
-			
-			print("Button Clicked!");
-			changeDescription("test5");
-			responseNum = 5;
-			response.checkResponse(responseNum);
-		}
-		
-		if (GUI.Button (new Rect (420, 160, buttonWidth, buttonHeight), dialogMenu.option6)) {
-			
-			print("Button Clicked!");
-			changeDescription("test6");
-			responseNum = 6;
-			response.checkResponse(responseNum);
-		}
-
-		if (GUI.Button (new Rect (50, 220, buttonWidth, buttonHeight), dialogMenu.option7)) {
-			
-			print("Button Clicked!");
-			changeDescription("test7");
-			responseNum = 7;
-			response.checkResponse(responseNum);
-		}
-		if (GUI.Button (new Rect (210, 220, buttonWidth, buttonHeight), dialogMenu.option8)) {
-			
-			print("Button Clicked!");
-			changeDescription("test8");
-			responseNum = 8;
-			response.checkResponse(responseNum);
-		}
-		if (GUI.Button (new Rect (370, 220, buttonWidth, buttonHeight), dialogMenu.option9)) {
-			
-			print("Button Clicked!");
-			changeDescription("test9");
-			responseNum = 9;
-			response.checkResponse(responseNum);
-		}
-		#endregion
-		GUI.EndGroup ();
-
-		//if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetButton("Exit"))) {
-		if (Input.GetKeyDown(KeyCode.Escape)) {
-			state.itemUseable = true;
-			GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
-			GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
-
-			GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
-
-			print("Exited Dialog!");
-
-		}
-		GUI.matrix = guiMat;
-
-	}
-	*/
-
+	
 	void changeDescription (string description){
 
 		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = description;
