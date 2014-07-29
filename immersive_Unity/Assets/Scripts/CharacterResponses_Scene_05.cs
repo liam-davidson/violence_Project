@@ -4,6 +4,32 @@ using System;
 using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class audio_Scene05_ReportIt {
+	public AudioClip clip1;
+	public AudioClip clip2;
+	public AudioClip clip3;
+	public AudioClip clip4;
+}
+
+[System.Serializable]
+public class audio_Scene05_TalkItOut {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
+[System.Serializable]
+public class audio_Scene05_Insult {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
+[System.Serializable]
+public class audio_Scene05_Joke {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
 public class CharacterResponses_Scene_05 : MonoBehaviour {
 	public CharacterInteract_Scene_05 state;
 	public FocusOnPlayer aiLook;
@@ -16,10 +42,16 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 	private Animator animKitchen;
 	public GameObject Player;
 
+	public audio_Scene05_ReportIt audioReportIt;
+	public audio_Scene05_TalkItOut audioTalkItOut;
+	public audio_Scene05_Insult audioInsult;
+	public audio_Scene05_Joke audioJoke;
+
 	int choiceCounter;
 	bool isSitting;
 	string currentAiLocation;
 	int maxChoiceNum;
+	float delay;
 
 	void Start() {
 		anim = GetComponent<Animator>();
@@ -30,6 +62,13 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 	}
 
 	void Update(){
+
+		if (choiceCounter == maxChoiceNum){
+			iTween.CameraFadeAdd ();
+			iTween.CameraFadeFrom (1,1);
+			//Application.Quit();
+			Application.LoadLevel ("Menu"); 
+		}
 
 		isSitting = anim.GetBool("isSitting");
 		print ("isSitting = " + isSitting);
@@ -42,44 +81,25 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		switch(caseNum){
 		
 		case 1:
-			print ("case1 ACTIVATE!");
+			print ("Report It ACTIVATE!");
 			//GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
 			//GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
 			//May want to use case inside case statement
-
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
-
-
-			choiceCounter++;
 			LeaveDialog();
+			StartCoroutine("ReportItAudio");
+	
+			choiceCounter++;
+			//LeaveDialog();
+
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
-
+			LeaveDialog();
+			StartCoroutine("TalkItOutAudio");
 
 			choiceCounter++;
-			LeaveDialog();
 		break;	
 		
 		case 3:
@@ -140,84 +160,112 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 			break;
 			
 		case 6:
-			print ("case6 ACTIVATE!");
+			print ("Joke ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
-
-
-			choiceCounter++;
+			
 			LeaveDialog();
+			StartCoroutine("JokeAudio");
+			
+			choiceCounter++;
 			break;	
 			
 		case 7:
-			print ("case7 ACTIVATE!");
+			print ("Insult ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
-
+			LeaveDialog();
+			StartCoroutine("InsultAudio");
 
 			choiceCounter++;
-			LeaveDialog();
 			break;
 			
 		case 8:
-			print ("case8 ACTIVATE!");
+			print ("Talk It Out ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
+			LeaveDialog();
+			StartCoroutine("TalkItOutAudio");
 
 			choiceCounter++;
-			LeaveDialog();
 			break;
 
 		case 9:
-			print ("case9 ACTIVATE!");
+			print ("Report It ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
+			LeaveDialog();
+			StartCoroutine("ReportItAudio");
 
 			choiceCounter++;
-			LeaveDialog();
 			break;
 
 		default:
 			break;
 		}
 	}
-	
+
+	public IEnumerator ReportItAudio (){
+
+		audio.clip = audioReportIt.clip1;
+		audio.Play ();
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip2;
+		audio.Play ();
+
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip3;
+		audio.Play ();
+
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip4;
+		audio.Play ();
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+	public IEnumerator TalkItOutAudio (){
+
+		audio.clip = audioTalkItOut.clip1;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioTalkItOut.clip2;
+		audio.Play ();
+
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+	public IEnumerator InsultAudio (){
+		
+		audio.clip = audioInsult.clip1;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioInsult.clip2;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+	public IEnumerator JokeAudio (){
+		
+		audio.clip = audioJoke.clip1;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioJoke.clip2;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
 		StreamWriter sw = File.AppendText ("TestFile.txt");

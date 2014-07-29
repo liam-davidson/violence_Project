@@ -15957,9 +15957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1061240354}
-  clip1: {fileID: 8300000, guid: 08732bdce7cd813428bbee2870dfa044, type: 3}
-  clip2: {fileID: 8300000, guid: aacc4cd689b199e4b9404a7456a69165, type: 3}
-  clip3: {fileID: 8300000, guid: 23710f4e741704e4380e18259b14dbdf, type: 3}
+  audioStart:
+    clip1: {fileID: 8300000, guid: 08732bdce7cd813428bbee2870dfa044, type: 3}
+    clip2: {fileID: 8300000, guid: aacc4cd689b199e4b9404a7456a69165, type: 3}
+    clip3: {fileID: 8300000, guid: 23710f4e741704e4380e18259b14dbdf, type: 3}
 --- !u!136 &1061240363
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18832,6 +18833,7 @@ GameObject:
   - 114: {fileID: 1258780100}
   - 114: {fileID: 1258780099}
   - 114: {fileID: 1258780096}
+  - 82: {fileID: 1258780094}
   m_Layer: 0
   m_Name: carl
   m_TagString: Untagged
@@ -18854,6 +18856,64 @@ Transform:
   - {fileID: 1327394749}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!82 &1258780094
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: aed8d45f06939ec46b2df00bc0248bd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &1258780096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18939,6 +18999,20 @@ MonoBehaviour:
   AI: {fileID: 1258780092}
   dialogue: {fileID: 1258780099}
   Player: {fileID: 1061240354}
+  audioReportIt:
+    clip1: {fileID: 8300000, guid: aed8d45f06939ec46b2df00bc0248bd2, type: 3}
+    clip2: {fileID: 8300000, guid: 1208a35921a117f49bd4d1f8bb812003, type: 3}
+    clip3: {fileID: 8300000, guid: 855fa9ceb4bbf944bb98aed05a1f185f, type: 3}
+    clip4: {fileID: 8300000, guid: 2d05bef465ae4a344ab6e6ca7f5e6592, type: 3}
+  audioTalkItOut:
+    clip1: {fileID: 8300000, guid: d98fb30a680500546ac034056f3e1cfb, type: 3}
+    clip2: {fileID: 8300000, guid: 9e2fbed562f4c3e4b83d6ffc8588a7dc, type: 3}
+  audioInsult:
+    clip1: {fileID: 8300000, guid: 8cab345499f92e44baab85080627a092, type: 3}
+    clip2: {fileID: 8300000, guid: 86673002f8974324ba1d90d422d7ca94, type: 3}
+  audioJoke:
+    clip1: {fileID: 8300000, guid: 022d04f8538c0c644927e54994eca808, type: 3}
+    clip2: {fileID: 8300000, guid: b1e18a0d9b0fd804c8e3a35fbe1b3d49, type: 3}
 --- !u!114 &1258780099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23720,6 +23794,18 @@ Prefab:
       objectReference: {fileID: 8300000, guid: aacc4cd689b199e4b9404a7456a69165, type: 3}
     - target: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
       propertyPath: clip3
+      value: 
+      objectReference: {fileID: 8300000, guid: 23710f4e741704e4380e18259b14dbdf, type: 3}
+    - target: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
+      propertyPath: audioStart.clip1
+      value: 
+      objectReference: {fileID: 8300000, guid: 08732bdce7cd813428bbee2870dfa044, type: 3}
+    - target: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
+      propertyPath: audioStart.clip2
+      value: 
+      objectReference: {fileID: 8300000, guid: aacc4cd689b199e4b9404a7456a69165, type: 3}
+    - target: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
+      propertyPath: audioStart.clip3
       value: 
       objectReference: {fileID: 8300000, guid: 23710f4e741704e4380e18259b14dbdf, type: 3}
     m_RemovedComponents:
