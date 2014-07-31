@@ -4,17 +4,35 @@ using System;
 using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class audio_Scene01_ReportIt {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
+[System.Serializable]
+public class audio_Scene01_TalkItOut {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
 public class CharacterResponses : MonoBehaviour {
-	public CharacterInteract state;
+
+	//TODO Change these to private
+	public CharacterInteract_Scene_01 state;
 	public FocusOnPlayer aiLook;
 	public GameObject AI;
-	public DialogGUI dialogue;
+	public DialogGUI_Scene_01 dialogue;
 	//public Transform targetLook;
+	public GameObject Player;
 
 	private Animator anim;
 	private Animator animTV;
 	private Animator animKitchen;
-	public GameObject Player;
+
+
+	public audio_Scene01_ReportIt audioReportIt;
+	public audio_Scene01_TalkItOut audioTalkItOut;
 
 	int choiceCounter;
 	bool isSitting;
@@ -23,7 +41,7 @@ public class CharacterResponses : MonoBehaviour {
 
 	void Start() {
 		anim = GetComponent<Animator>();
-		//animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
+		animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 		currentAiLocation = "default";
 		maxChoiceNum = 2;
 		//Player = GameObject.Find("FirstPersonController");
@@ -55,7 +73,7 @@ public class CharacterResponses : MonoBehaviour {
 				anim.SetBool("isWalking", true);
 				anim.SetBool("interact", false);
 
-				//currentAiLocation = "TV";
+				currentAiLocation = "TV";
 			}
 
 			else if(currentAiLocation == "Kitchen"){
@@ -67,7 +85,7 @@ public class CharacterResponses : MonoBehaviour {
 				aiLook.enabled = false;
 				anim.SetBool("isWalking", true);
 				anim.SetBool("interact", false);
-				//currentAiLocation = "TV";
+				currentAiLocation = "TV";
 
 
 				//Code to move
@@ -77,6 +95,8 @@ public class CharacterResponses : MonoBehaviour {
 			else if(currentAiLocation == "TV"){
 				//Code to move	
 			}
+
+			StartCoroutine("ReportItAudio");
 
 			currentAiLocation = "TV";
 
@@ -180,9 +200,14 @@ public class CharacterResponses : MonoBehaviour {
 		case 8:
 			print ("case8 ACTIVATE!");
 
-			iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
-			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
+			StartCoroutine("TalkItOutAudio");
+
+			//iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+			//aiLook.enabled = false;
+			//anim.SetBool("isWalking", true);
+
+
+
 
 			choiceCounter++;
 			LeaveDialog();
@@ -207,6 +232,42 @@ public class CharacterResponses : MonoBehaviour {
 		sw.Write (choiceCounter);
 		sw.Close ();
 	}
+
+	public IEnumerator ReportItAudio (){
+		
+		yield return new WaitForSeconds(7.0f);
+
+		audio.clip = audioReportIt.clip1;
+		audio.Play ();
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip2;
+		audio.Play ();
+
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+	public IEnumerator TalkItOutAudio (){
+		
+		//yield return new WaitForSeconds(7.0f);
+		aiLook.enabled = false;
+
+		audio.clip = audioTalkItOut.clip1;
+		audio.Play ();
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioTalkItOut.clip2;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+		iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
+		anim.SetBool("isWalking", true);
+
+		state.itemUseable = false;
+	}
+
 
 	void LeaveDialog(){
 		state.itemUseable = true;

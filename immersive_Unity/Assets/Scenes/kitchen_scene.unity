@@ -11842,14 +11842,13 @@ GameObject:
   - 54: {fileID: 1061240365}
   - 114: {fileID: 1061240364}
   - 136: {fileID: 1061240363}
-  - 114: {fileID: 1061240362}
   - 114: {fileID: 1061240361}
   - 114: {fileID: 1061240360}
   - 114: {fileID: 1061240359}
   - 114: {fileID: 1061240358}
   - 114: {fileID: 1061240357}
   - 114: {fileID: 1061240356}
-  - 114: {fileID: 1061240370}
+  - 114: {fileID: 1061240362}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -12160,13 +12159,12 @@ MonoBehaviour:
 --- !u!114 &1061240362
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1546239772}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1061240354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db33e6442d5f5c48b72d2ec591530c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 019cc642d51517e40abcda496216bf8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &1061240363
@@ -12314,47 +12312,6 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1061240370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400022, guid: 4e76f1356a871b7449eb890087e60f9f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1546239772}
-  m_GameObject: {fileID: 1061240354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweenName: 
-  playAutomatically: 1
-  delay: 0
-  type: 3
-  showIconInInspector: 1
-  keys:
-  - time
-  - easetype
-  indexes: 0000000000000000
-  metadatas:
-  - 
-  - 
-  ints: 
-  floats:
-  - 5
-  bools: 
-  strings: []
-  vector3s: []
-  colors: []
-  spaces: 
-  easeTypes: 15000000
-  loopTypes: 
-  gameObjects: []
-  transforms: []
-  audioClips: []
-  audioSources: []
-  vector3Arrays: []
-  transformArrays: []
-  paths: []
 --- !u!1 &1072903760
 GameObject:
   m_ObjectHideFlags: 0
@@ -14471,8 +14428,6 @@ GameObject:
   - 65: {fileID: 1258780103}
   - 23: {fileID: 1258780102}
   - 54: {fileID: 1258780101}
-  - 114: {fileID: 1258780100}
-  - 114: {fileID: 1258780099}
   - 114: {fileID: 1258780098}
   - 114: {fileID: 1258780097}
   - 114: {fileID: 1258780096}
@@ -14480,6 +14435,9 @@ GameObject:
   - 114: {fileID: 1258780094}
   - 114: {fileID: 1258780105}
   - 114: {fileID: 1258780106}
+  - 114: {fileID: 1258780100}
+  - 114: {fileID: 1258780099}
+  - 82: {fileID: 1258780107}
   m_Layer: 0
   m_Name: carl
   m_TagString: Untagged
@@ -14682,30 +14640,34 @@ MonoBehaviour:
   aiLook: {fileID: 1258780097}
   AI: {fileID: 1258780092}
   dialogue: {fileID: 1258780099}
-  targetLook: {fileID: 620464697}
   Player: {fileID: 1061240354}
+  audioReportIt:
+    clip1: {fileID: 8300000, guid: ee62f9a55213acd4eb29e9cf5a5efcca, type: 3}
+    clip2: {fileID: 8300000, guid: 04beb422201e6c84e8cee5ddc7ffb245, type: 3}
+  audioTalkItOut:
+    clip1: {fileID: 8300000, guid: 9c7290297b3366748b2242fee3f404f2, type: 3}
+    clip2: {fileID: 8300000, guid: d287dfa02a5a03b4b94ec8403216d575, type: 3}
 --- !u!114 &1258780099
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 61554c532efcc13469fd9534ff333499,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1258780092}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777dd521206327f419bbb83e625c09ad, type: 3}
+  m_Script: {fileID: 11500000, guid: b59d1f6fb417acb4da0fd55d85243aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogMenu:
-    option1: 'Report it '
-    option2: Talk it out
-    option3: Insult
-    option4: Joke
-    option5: Shove him
-    option6: "Punch, kick\u2026"
-    option7: Threaten
-    option8: Ignore it
-    option9: Leave
+    option1: 1
+    option2: 2
+    option3: 3
+    option4: 4
+    option5: 5
+    option6: 6
+    option7: 7
+    option8: 8
+    option9: 9
   radialMenuObj:
     radialBackground: {fileID: 1131772720}
     controllerArrow: {fileID: 930812682}
@@ -14732,18 +14694,14 @@ MonoBehaviour:
 --- !u!114 &1258780100
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 61554c532efcc13469fd9534ff333499,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1258780092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97268134e258bcc49b6abd09a7f2e0c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 70b889f8574e23a41bab0bc80365f2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Material:
-    defaultMaterial: {fileID: 2100000, guid: 704e9eb1caeb4a545bf62e54adc28f89, type: 2}
-    glowMaterial: {fileID: 2100000, guid: 4ef3fe19ab6c1124ca4df1ea5102e0b4, type: 2}
   targetFollow: {fileID: 1061240355}
   target: {fileID: 976353636}
   itemUseable: 1
@@ -14914,6 +14872,64 @@ MonoBehaviour:
   vector3Arrays: []
   transformArrays: []
   paths: []
+--- !u!82 &1258780107
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee62f9a55213acd4eb29e9cf5a5efcca, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1264039694
 GameObject:
   m_ObjectHideFlags: 0
@@ -18198,7 +18214,13 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1327394749}
-    m_RemovedComponents: []
+    - target: {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1061240354}
+    m_RemovedComponents:
+    - {fileID: 11400022, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
+    - {fileID: 11400012, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4e76f1356a871b7449eb890087e60f9f, type: 2}
   m_RootGameObject: {fileID: 1061240354}
   m_IsPrefabParent: 0

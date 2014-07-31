@@ -2,7 +2,7 @@
 using System.Collections;
 
 [System.Serializable]
-public class options {
+public class options_S01 {
 	public string option1;
 	public string option2;
 	public string option3;
@@ -14,7 +14,7 @@ public class options {
 	public string option9;
 }
 [System.Serializable]
-public class radialMenu {
+public class radialMenu_S01 {
 	public GameObject radialBackground;
 	public GameObject controllerArrow;
 	public GameObject Option1;
@@ -29,7 +29,7 @@ public class radialMenu {
 
 }
 [System.Serializable]
-public class radialMat {
+public class radialMat_S01 {
 	public Material off_1;
 	public Material off_2;
 	public Material off_3;
@@ -42,7 +42,7 @@ public class radialMat {
 	
 }
 
-public class DialogGUI : MonoBehaviour {
+public class DialogGUI_Scene_01 : MonoBehaviour {
 	
 	private float y;
 	private float x;
@@ -62,9 +62,9 @@ public class DialogGUI : MonoBehaviour {
 	private Vector3 scale;
 	private CharacterResponses response;
 
-	public options dialogMenu;
-	public radialMenu radialMenuObj;
-	public radialMat radialMenuMat;
+	public options_S01 dialogMenu;
+	public radialMenu_S01 radialMenuObj;
+	public radialMat_S01 radialMenuMat;
 
 		
 	float originalWidth = 1024.0f;
@@ -78,17 +78,17 @@ public class DialogGUI : MonoBehaviour {
 		response = GetComponent<CharacterResponses>();
 		responseNum = 0;
 
-		radialMenuObj.controllerArrow.renderer.enabled = true;
-		radialMenuObj.radialBackground.renderer.enabled = true;
-		radialMenuObj.Option1.renderer.enabled = true;
-		radialMenuObj.Option2.renderer.enabled = true;
-		radialMenuObj.Option3.renderer.enabled = true;
-		radialMenuObj.Option4.renderer.enabled = true;
-		radialMenuObj.Option5.renderer.enabled = true;
-		radialMenuObj.Option6.renderer.enabled = true;
-		radialMenuObj.Option7.renderer.enabled = true;
-		radialMenuObj.Option8.renderer.enabled = true;
-		radialMenuObj.Option9.renderer.enabled = true;
+		radialMenuObj.controllerArrow.renderer.enabled = false;
+		radialMenuObj.radialBackground.renderer.enabled = false;
+		radialMenuObj.Option1.renderer.enabled = false;
+		radialMenuObj.Option2.renderer.enabled = false;
+		radialMenuObj.Option3.renderer.enabled = false;
+		radialMenuObj.Option4.renderer.enabled = false;
+		radialMenuObj.Option5.renderer.enabled = false;
+		radialMenuObj.Option6.renderer.enabled = false;
+		radialMenuObj.Option7.renderer.enabled = false;
+		radialMenuObj.Option8.renderer.enabled = false;
+		radialMenuObj.Option9.renderer.enabled = false;
 
 	}
 
@@ -131,8 +131,9 @@ public class DialogGUI : MonoBehaviour {
 		if (test < 72 && test > 36) {
 			//Option1.renderer.enabled = false;
 			radialMenuObj.Option1.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
 			//if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 				//changeDescription("test");
 				responseNum = 1;
 				response.checkResponse(responseNum);
@@ -140,7 +141,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 36 && test > 0) {
 			radialMenuObj.Option2.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test2");
 				responseNum = 2;
@@ -149,7 +150,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 0 && test > -36) {
 			radialMenuObj.Option3.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test3");
 				responseNum = 3;
@@ -158,7 +159,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -36 && test > -72) {
 			radialMenuObj.Option4.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test4");
 				responseNum = 4;
@@ -167,7 +168,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -72 && test > -108) {
 			radialMenuObj.Option5.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test5");
 				responseNum = 5;
@@ -176,7 +177,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -108 && test > -138) {
 			radialMenuObj.Option6.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test6");
 				responseNum = 6;
@@ -185,7 +186,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -144 && test > -179) {
 			radialMenuObj.Option7.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test7");
 				responseNum = 7;
@@ -194,7 +195,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 179 && test > 144) {
 			radialMenuObj.Option8.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test8");
 				responseNum = 8;
@@ -203,7 +204,7 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 144 && test > 108) {
 			radialMenuObj.Option9.renderer.material.color = Color.red;
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			if (Input.GetKeyDown(KeyCode.JoystickButton0)){
 			//if (Input.GetMouseButton(0)){
 				//changeDescription("test9");
 				responseNum = 9;
