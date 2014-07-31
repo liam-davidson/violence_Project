@@ -12164,7 +12164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061240354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019cc642d51517e40abcda496216bf8d, type: 3}
+  m_Script: {fileID: 11500000, guid: da4428a38300b5243abf8ee98612709e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &1061240363
@@ -14438,6 +14438,8 @@ GameObject:
   - 114: {fileID: 1258780100}
   - 114: {fileID: 1258780099}
   - 82: {fileID: 1258780107}
+  - 114: {fileID: 1258780109}
+  - 114: {fileID: 1258780108}
   m_Layer: 0
   m_Name: carl
   m_TagString: Untagged
@@ -14642,11 +14644,11 @@ MonoBehaviour:
   dialogue: {fileID: 1258780099}
   Player: {fileID: 1061240354}
   audioReportIt:
-    clip1: {fileID: 8300000, guid: ee62f9a55213acd4eb29e9cf5a5efcca, type: 3}
-    clip2: {fileID: 8300000, guid: 04beb422201e6c84e8cee5ddc7ffb245, type: 3}
+    clip1: {fileID: 8300000, guid: ae2c35f0cacb69a44b47873785534a2a, type: 3}
+    clip2: {fileID: 8300000, guid: 5ae5fc0ab600dd34f934d8e340c656da, type: 3}
   audioTalkItOut:
-    clip1: {fileID: 8300000, guid: 9c7290297b3366748b2242fee3f404f2, type: 3}
-    clip2: {fileID: 8300000, guid: d287dfa02a5a03b4b94ec8403216d575, type: 3}
+    clip1: {fileID: 8300000, guid: 942bfc3d425e83c4ab28e5486c594ac5, type: 3}
+    clip2: {fileID: 8300000, guid: 39639f8609c989343ab0d160a1c348fd, type: 3}
 --- !u!114 &1258780099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14658,39 +14660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59d1f6fb417acb4da0fd55d85243aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogMenu:
-    option1: 1
-    option2: 2
-    option3: 3
-    option4: 4
-    option5: 5
-    option6: 6
-    option7: 7
-    option8: 8
-    option9: 9
-  radialMenuObj:
-    radialBackground: {fileID: 1131772720}
-    controllerArrow: {fileID: 930812682}
-    Option1: {fileID: 1677543258}
-    Option2: {fileID: 823419893}
-    Option3: {fileID: 932458351}
-    Option4: {fileID: 858754788}
-    Option5: {fileID: 1455498244}
-    Option6: {fileID: 1208944895}
-    Option7: {fileID: 649057437}
-    Option8: {fileID: 2053851746}
-    Option9: {fileID: 1630020854}
-  radialMenuMat:
-    off_1: {fileID: 2100000, guid: c32895571b8f4e040895b75fab4255ac, type: 2}
-    off_2: {fileID: 2100000, guid: d165430b2a092bd4b84500aa832dbe84, type: 2}
-    off_3: {fileID: 2100000, guid: 58d5be76e29bb214a80c15969e4cad1c, type: 2}
-    off_4: {fileID: 2100000, guid: 0efc30fe8c2c4974da0bcd72d1ef7410, type: 2}
-    off_5: {fileID: 2100000, guid: d4275129b4959ad448ac6b84a33bbe17, type: 2}
-    off_6: {fileID: 2100000, guid: d4f68dd5a8de50f4ebbe91aa54be7db0, type: 2}
-    off_7: {fileID: 2100000, guid: 074b39f84f7e3a44884996c867a6c876, type: 2}
-    off_8: {fileID: 2100000, guid: 340d3fa700f596d42aa8ca6ea51ce37c, type: 2}
-    off_9: {fileID: 2100000, guid: e03bc40dad40e514c851d91369039ca5, type: 2}
-  responseNum: 0
 --- !u!114 &1258780100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14702,9 +14671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b889f8574e23a41bab0bc80365f2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFollow: {fileID: 1061240355}
-  target: {fileID: 976353636}
-  itemUseable: 1
 --- !u!54 &1258780101
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14880,7 +14846,7 @@ AudioSource:
   m_GameObject: {fileID: 1258780092}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: ee62f9a55213acd4eb29e9cf5a5efcca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ae2c35f0cacb69a44b47873785534a2a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14930,6 +14896,54 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1258780108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2da2ffdb2f43a43a1550e06fe07aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetFollow: {fileID: 1061240355}
+  target: {fileID: 976353636}
+  itemUseable: 1
+--- !u!114 &1258780109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258780092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9948a117138cb9e48b2d7498c9c3a050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radialMenuObj:
+    radialBackground: {fileID: 1131772720}
+    controllerArrow: {fileID: 930812682}
+    Option1: {fileID: 1677543258}
+    Option2: {fileID: 823419893}
+    Option3: {fileID: 932458351}
+    Option4: {fileID: 858754788}
+    Option5: {fileID: 1455498244}
+    Option6: {fileID: 1208944895}
+    Option7: {fileID: 649057437}
+    Option8: {fileID: 2053851746}
+    Option9: {fileID: 1630020854}
+  radialMenuMat:
+    off_1: {fileID: 2100000, guid: c32895571b8f4e040895b75fab4255ac, type: 2}
+    off_2: {fileID: 2100000, guid: d165430b2a092bd4b84500aa832dbe84, type: 2}
+    off_3: {fileID: 2100000, guid: 58d5be76e29bb214a80c15969e4cad1c, type: 2}
+    off_4: {fileID: 2100000, guid: 0efc30fe8c2c4974da0bcd72d1ef7410, type: 2}
+    off_5: {fileID: 2100000, guid: d4275129b4959ad448ac6b84a33bbe17, type: 2}
+    off_6: {fileID: 2100000, guid: d4f68dd5a8de50f4ebbe91aa54be7db0, type: 2}
+    off_7: {fileID: 2100000, guid: 074b39f84f7e3a44884996c867a6c876, type: 2}
+    off_8: {fileID: 2100000, guid: 340d3fa700f596d42aa8ca6ea51ce37c, type: 2}
+    off_9: {fileID: 2100000, guid: e03bc40dad40e514c851d91369039ca5, type: 2}
+  responseNum: 0
 --- !u!1 &1264039694
 GameObject:
   m_ObjectHideFlags: 0

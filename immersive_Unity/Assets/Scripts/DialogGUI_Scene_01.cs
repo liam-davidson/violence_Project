@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
+/*[System.Serializable]
 public class options_S01 {
 	public string option1;
 	public string option2;
@@ -12,7 +12,7 @@ public class options_S01 {
 	public string option7;
 	public string option8;
 	public string option9;
-}
+}*/
 [System.Serializable]
 public class radialMenu_S01 {
 	public GameObject radialBackground;
@@ -62,7 +62,7 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 	private Vector3 scale;
 	private CharacterResponses response;
 
-	public options_S01 dialogMenu;
+	//public options_S01 dialogMenu;
 	public radialMenu_S01 radialMenuObj;
 	public radialMat_S01 radialMenuMat;
 
