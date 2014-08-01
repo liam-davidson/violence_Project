@@ -78,7 +78,19 @@ public class DialogGUI_Scene_02 : MonoBehaviour {
 		off_9 = Resources.Load("radial_material_9", typeof(Material)) as Material;
 
 
-		controllerArrow.renderer.enabled = true;
+		controllerArrow.renderer.enabled = false;
+		radialBackground.renderer.enabled = false;
+		Option1.renderer.enabled = false;
+		Option2.renderer.enabled = false;
+		Option3.renderer.enabled = false;
+		Option4.renderer.enabled = false;
+		Option5.renderer.enabled = false;
+		Option6.renderer.enabled = false;
+		Option7.renderer.enabled = false;
+		Option8.renderer.enabled = false;
+		Option9.renderer.enabled = false;
+
+		/*controllerArrow.renderer.enabled = true;
 		radialBackground.renderer.enabled = true;
 		Option1.renderer.enabled = true;
 		Option2.renderer.enabled = true;
@@ -89,7 +101,7 @@ public class DialogGUI_Scene_02 : MonoBehaviour {
 		Option7.renderer.enabled = true;
 		Option8.renderer.enabled = true;
 		Option9.renderer.enabled = true;
-
+		*/
 	}
 
 	void Update () {
