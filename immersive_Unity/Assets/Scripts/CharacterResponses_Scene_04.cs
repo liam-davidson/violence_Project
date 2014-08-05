@@ -5,57 +5,36 @@ using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
-public class audio_Scene05_Intro {
-	public AudioClip clip1;
-}
-
-[System.Serializable]
-public class audio_Scene05_ReportIt {
+public class audio_Scene04_ReportIt {
 	public AudioClip clip1;
 	public AudioClip clip2;
-
+	public AudioClip clip3;
+	public AudioClip clip4;
 }
 
 [System.Serializable]
-public class audio_Scene05_TalkItOut {
+public class audio_Scene04_TalkItOut {
 	public AudioClip clip1;
 	public AudioClip clip2;
 }
 
 [System.Serializable]
-public class audio_Scene05_Insult {
+public class audio_Scene04_Insult {
 	public AudioClip clip1;
 	public AudioClip clip2;
 }
 
 [System.Serializable]
-public class audio_Scene05_Joke {
+public class audio_Scene04_Joke {
 	public AudioClip clip1;
 	public AudioClip clip2;
 }
 
-[System.Serializable]
-public class audio_Scene05_Threaten {
-	public AudioClip clip1;
-	public AudioClip clip2;
-}
-
-[System.Serializable]
-public class audio_Scene05_Ignore {
-	public AudioClip clip1;
-}
-
-[System.Serializable]
-public class audio_Scene05_Leave {
-	public AudioClip clip1;
-}
-
-
-public class CharacterResponses_Scene_05 : MonoBehaviour {
-	public CharacterInteract_Scene_05 state;
+public class CharacterResponses_Scene_04 : MonoBehaviour {
+	public CharacterInteract_Scene_04 state;
 	public FocusOnPlayer aiLook;
 	public GameObject AI;
-	public DialogGUI_Scene_05 dialogue;
+	public DialogGUI_Scene_04 dialogue;
 	//public Transform targetLook;
 
 	private Animator anim;
@@ -63,14 +42,10 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 	private Animator animKitchen;
 	public GameObject Player;
 
-	public audio_Scene05_Intro audioIntro;
-	public audio_Scene05_ReportIt audioReportIt;
-	public audio_Scene05_TalkItOut audioTalkItOut;
-	public audio_Scene05_Insult audioInsult;
-	public audio_Scene05_Joke audioJoke;
-	public audio_Scene05_Threaten audioThreaten;
-	public audio_Scene05_Ignore audioIgnore;
-	public audio_Scene05_Leave audioLeave;
+	public audio_Scene04_ReportIt audioReportIt;
+	public audio_Scene04_TalkItOut audioTalkItOut;
+	public audio_Scene04_Insult audioInsult;
+	public audio_Scene04_Joke audioJoke;
 
 	int choiceCounter;
 	bool isSitting;
@@ -129,29 +104,59 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		
 		case 3:
 			print ("case3 ACTIVATE!");
-			LeaveDialog();
-			StartCoroutine("ThreatenAudio");
+
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
-
+			LeaveDialog();
 			break;
 		
 		case 4:
 			print ("case4 ACTIVATE!");
 
-			LeaveDialog();
-			StartCoroutine("IgnoreAudio");
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
+			LeaveDialog();
 			break;
 
 		case 5:
 			print ("case5 ACTIVATE!");
 
-			LeaveDialog();
-			StartCoroutine("LeaveAudio");
+			if (currentAiLocation == "default"){
+				
+				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
+				anim.SetBool("isWalking", true);
+				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
+				currentAiLocation = "TV";
+			}
+			else if (currentAiLocation == "TV"){
+				//Do nothing
+			}
+
 
 			choiceCounter++;
+			LeaveDialog();
 			break;
 			
 		case 6:
@@ -196,15 +201,6 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator IntroAudio (){
-		
-		audio.clip = audioIntro.clip1;
-		audio.Play ();
-		yield return new WaitForSeconds(audio.clip.length);
-
-		state.itemUseable = false;
-	}
-
 	public IEnumerator ReportItAudio (){
 
 		audio.clip = audioReportIt.clip1;
@@ -214,6 +210,15 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		audio.clip = audioReportIt.clip2;
 		audio.Play ();
 
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip3;
+		audio.Play ();
+
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioReportIt.clip4;
+		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
 		state.itemUseable = false;
 	}
@@ -260,37 +265,6 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		state.itemUseable = false;
 	}
 
-	public IEnumerator ThreatenAudio (){
-		
-		audio.clip = audioThreaten.clip1;
-		audio.Play ();
-		
-		yield return new WaitForSeconds(audio.clip.length);
-		
-		audio.clip = audioThreaten.clip2;
-		audio.Play ();
-		
-		yield return new WaitForSeconds(audio.clip.length);
-		state.itemUseable = false;
-	}
-	
-	public IEnumerator IgnoreAudio (){
-		
-		audio.clip = audioIgnore.clip1;
-		audio.Play ();
-		
-		yield return new WaitForSeconds(audio.clip.length);
-		state.itemUseable = false;
-	}
-
-	public IEnumerator LeaveAudio (){
-		
-		audio.clip = audioLeave.clip1;
-		audio.Play ();
-		
-		yield return new WaitForSeconds(audio.clip.length);
-		state.itemUseable = false;
-	}
 
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
@@ -327,17 +301,10 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		anim.SetBool("isWalking", true);
 	}
 
-	void IntroEventStart(){
-		
-		anim.SetBool("isWalking", true);
-		
-	}
+	void kitchenEventEnd(){
 
-	void IntroEventEnd(){
-
+		anim.SetBool("interact", true);
 		eventEnd ();
-		StartCoroutine ("IntroAudio");
-
 	}
 
 	void chairEventEnd(){

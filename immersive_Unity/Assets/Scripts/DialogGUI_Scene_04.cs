@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialogGUI_Scene_05 : MonoBehaviour {
+public class DialogGUI_Scene_04 : MonoBehaviour {
 	
 	private float y;
 	private float x;
@@ -17,9 +17,9 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 	private float deltaX;
 	private float deltaY;
 
-	private CharacterInteract_Scene_05 state;
+	private CharacterInteract_Scene_04 state;
 	private Vector3 scale;
-	private CharacterResponses_Scene_05 response;
+	private CharacterResponses_Scene_04 response;
 	
 	float originalWidth = 1024.0f;
 	float originalHeight = 768.0f;
@@ -50,8 +50,8 @@ public class DialogGUI_Scene_05 : MonoBehaviour {
 	public int responseNum;
 
 	void Start(){
-		state = gameObject.GetComponent<CharacterInteract_Scene_05>();
-		response = GetComponent<CharacterResponses_Scene_05>();
+		state = gameObject.GetComponent<CharacterInteract_Scene_04>();
+		response = GetComponent<CharacterResponses_Scene_04>();
 		responseNum = 0;
 
 
