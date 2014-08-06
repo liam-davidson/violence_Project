@@ -230,10 +230,10 @@ public class CharacterResponses_Scene_02 : MonoBehaviour {
 	
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
-		StreamWriter sw = File.AppendText ("TestFile.txt");
+		/*StreamWriter sw = File.AppendText ("TestFile.txt");
 		sw.Write (",");
 		sw.Write (choiceCounter);
-		sw.Close ();
+		sw.Close ();*/
 	}
 
 	public IEnumerator CutInLine (){

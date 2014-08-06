@@ -77,7 +77,7 @@ public class CharacterInteract_Scene_04 : MonoBehaviour {
 		//and remove the ability to look around.
 		if(!itemUseable){
 
-			GetComponent<DialogGUI_Scene_05>().enabled = true;
+			GetComponent<DialogGUI_Scene_04>().enabled = true;
 
 			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = true;
 			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = true;
@@ -106,7 +106,7 @@ public class CharacterInteract_Scene_04 : MonoBehaviour {
 		//then allow the player to move and look around again.
 		else if(rotationReset){
 		
-			GetComponent<DialogGUI_Scene_05>().enabled = false;
+			GetComponent<DialogGUI_Scene_04>().enabled = false;
 
 			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
 			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = false;

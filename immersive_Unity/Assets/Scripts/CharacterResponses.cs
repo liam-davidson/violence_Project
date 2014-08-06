@@ -227,10 +227,10 @@ public class CharacterResponses : MonoBehaviour {
 	
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
-		StreamWriter sw = File.AppendText ("TestFile.txt");
-		sw.Write (",");
-		sw.Write (choiceCounter);
-		sw.Close ();
+		//StreamWriter sw = File.AppendText ("TestFile.txt");
+		//sw.Write (",");
+		//sw.Write (choiceCounter);
+		//sw.Close ();
 	}
 
 	public IEnumerator ReportItAudio (){

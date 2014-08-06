@@ -30,6 +30,12 @@ public class audio_Scene04_Joke {
 	public AudioClip clip2;
 }
 
+[System.Serializable]
+public class audio_Scene04_Threaten {
+	public AudioClip clip1;
+	public AudioClip clip2;
+}
+
 public class CharacterResponses_Scene_04 : MonoBehaviour {
 	public CharacterInteract_Scene_04 state;
 	public FocusOnPlayer aiLook;
@@ -46,6 +52,7 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 	public audio_Scene04_TalkItOut audioTalkItOut;
 	public audio_Scene04_Insult audioInsult;
 	public audio_Scene04_Joke audioJoke;
+	public audio_Scene04_Threaten audioThreaten;
 
 	int choiceCounter;
 	bool isSitting;
@@ -79,7 +86,7 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 
 	public void checkResponse(int caseNum){
 		switch(caseNum){
-		
+
 		case 1:
 			print ("Report It ACTIVATE!");
 			//GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
@@ -103,26 +110,16 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 		break;	
 		
 		case 3:
-			print ("case3 ACTIVATE!");
+			print ("Threaten ACTIVATE!");
 
-			if (currentAiLocation == "default"){
-				
-				iTweenEvent.GetEvent(Player,"SideStepEvent").Play();
-				anim.SetBool("isWalking", true);
-				iTweenEvent.GetEvent(AI,"WalkToGroupEvent").Play();
-				currentAiLocation = "TV";
-			}
-			else if (currentAiLocation == "TV"){
-				//Do nothing
-			}
-
+			StartCoroutine("ThreatenAudio");
 
 			choiceCounter++;
 			LeaveDialog();
 			break;
 		
 		case 4:
-			print ("case4 ACTIVATE!");
+			print ("Ignore ACTIVATE!");
 
 			if (currentAiLocation == "default"){
 				
@@ -141,7 +138,7 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 			break;
 
 		case 5:
-			print ("case5 ACTIVATE!");
+			print ("Leave ACTIVATE!");
 
 			if (currentAiLocation == "default"){
 				
@@ -265,13 +262,26 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 		state.itemUseable = false;
 	}
 
+	public IEnumerator ThreatenAudio (){
+		
+		audio.clip = audioThreaten.clip1;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		
+		audio.clip = audioThreaten.clip2;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
 
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
-		StreamWriter sw = File.AppendText ("TestFile.txt");
+		/*StreamWriter sw = File.AppendText ("TestFile.txt");
 		sw.Write (",");
 		sw.Write (choiceCounter);
-		sw.Close ();
+		sw.Close ();*/
 	}
 
 	void LeaveDialog(){
