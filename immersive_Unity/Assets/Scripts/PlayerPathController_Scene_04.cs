@@ -19,7 +19,7 @@ public class PlayerPathController_Scene_04 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		AiInteract = GameObject.Find ("carl").GetComponent<CharacterInteract_Scene_04> ();
+		AiInteract = GameObject.Find ("Antagonist").GetComponent<CharacterInteract_Scene_04> ();
 	}
 	
 	// Update is called once per frame

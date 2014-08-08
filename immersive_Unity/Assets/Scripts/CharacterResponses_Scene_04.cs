@@ -93,18 +93,15 @@ public class CharacterResponses_Scene_04 : MonoBehaviour {
 			//GameObject.Find ("radial_background").GetComponentInChildren<MeshRenderer>().enabled = false;
 			//May want to use case inside case statement
 			LeaveDialog();
-			StartCoroutine("ReportItAudio");
-	
-			choiceCounter++;
-			//LeaveDialog();
 
+			choiceCounter++;
 			break;
 		
 		case 2:
 			print ("case2 ACTIVATE!");
 
 			LeaveDialog();
-			StartCoroutine("TalkItOutAudio");
+
 
 			choiceCounter++;
 		break;	

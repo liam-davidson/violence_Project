@@ -111,6 +111,7 @@
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Diffuse.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Diffuse.shader" />
      <None Include="Assets\Scripts\Test_Script_Please_Ignore.txt" />
+     <None Include="Assets\Scripts\EyelashFix.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Specular.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Bump.shader" />
      <None Include="Assets\Materials\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Specular.shader" />
