@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/spline_test.unity
   - enabled: 0
     path: Assets/Scenes/controller_test.unity
+  - enabled: 0
+    path: Assets/HomeInteriorPack/DemoScene.unity

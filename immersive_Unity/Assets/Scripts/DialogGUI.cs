@@ -58,7 +58,7 @@ public class DialogGUI : MonoBehaviour {
 	private float deltaX;
 	private float deltaY;
 
-	private CharacterInteract state;
+	private CharacterInteract_Scene_01 state;
 	private Vector3 scale;
 	private CharacterResponses response;
 
@@ -74,7 +74,7 @@ public class DialogGUI : MonoBehaviour {
 	public int responseNum;
 
 	void Start(){
-		state = gameObject.GetComponent<CharacterInteract>();
+		state = gameObject.GetComponent<CharacterInteract_Scene_01>();
 		response = GetComponent<CharacterResponses>();
 		responseNum = 0;
 
@@ -93,11 +93,11 @@ public class DialogGUI : MonoBehaviour {
 	}
 
 	void Update () {
-		//x = Input.GetAxis("JoyHorizontal");
-		//y = Input.GetAxis("JoyVertical");
+		x = Input.GetAxis("JoyHorizontal");
+		y = Input.GetAxis("JoyVertical");
 
-		x = Input.mousePosition.x;
-		y = Input.mousePosition.y;
+		//x = Input.mousePosition.x;
+		//y = Input.mousePosition.y;
 
 		stickVector.x = x;
 		stickVector.y = y;
@@ -131,8 +131,8 @@ public class DialogGUI : MonoBehaviour {
 		if (test < 72 && test > 36) {
 			//Option1.renderer.enabled = false;
 			radialMenuObj.Option1.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test");
 				responseNum = 1;
 				response.checkResponse(responseNum);
@@ -140,8 +140,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 36 && test > 0) {
 			radialMenuObj.Option2.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test2");
 				responseNum = 2;
 				response.checkResponse(responseNum);
@@ -149,8 +149,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 0 && test > -36) {
 			radialMenuObj.Option3.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test3");
 				responseNum = 3;
 				response.checkResponse(responseNum);
@@ -158,8 +158,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -36 && test > -72) {
 			radialMenuObj.Option4.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test4");
 				responseNum = 4;
 				response.checkResponse(responseNum);
@@ -167,8 +167,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -72 && test > -108) {
 			radialMenuObj.Option5.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test5");
 				responseNum = 5;
 				response.checkResponse(responseNum);
@@ -176,8 +176,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -108 && test > -138) {
 			radialMenuObj.Option6.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test6");
 				responseNum = 6;
 				response.checkResponse(responseNum);
@@ -185,8 +185,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < -144 && test > -179) {
 			radialMenuObj.Option7.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test7");
 				responseNum = 7;
 				response.checkResponse(responseNum);
@@ -194,8 +194,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 179 && test > 144) {
 			radialMenuObj.Option8.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test8");
 				responseNum = 8;
 				response.checkResponse(responseNum);
@@ -203,8 +203,8 @@ public class DialogGUI : MonoBehaviour {
 		}
 		if (test < 144 && test > 108) {
 			radialMenuObj.Option9.renderer.material.color = Color.red;
-			//if (Input.GetKeyDown(KeyCode.JoystickButton0)){
-			if (Input.GetMouseButton(0)){
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0)){
+			//if (Input.GetMouseButton(0)){
 				//changeDescription("test9");
 				responseNum = 9;
 				response.checkResponse(responseNum);

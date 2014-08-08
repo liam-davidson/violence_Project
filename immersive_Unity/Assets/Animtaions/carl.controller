@@ -25,13 +25,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ta_04_04takiguchi_sit_chairElbow_031105_copy
+  m_Name: Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 95f3de88c0c3954429c0d079867f580d, type: 3}
+  - {fileID: 7400000, guid: bb5715c9604094b48949fb4aaa87b4df, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 48, y: 48, z: 0}
+  m_Position: {x: 24, y: 48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
