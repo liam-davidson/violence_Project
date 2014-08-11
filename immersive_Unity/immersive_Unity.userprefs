@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterResponses_Scene_06.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerPathController_Scene_07.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerPathController_Scene_06.cs" Line="62" Column="56" />
-      <File FileName="Assets\Scripts\CharacterResponses_Scene_04.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterInteract_Scene_04.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DialogGUI_Scene_06.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterInteract_Scene_06.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterResponses_Scene_06.cs" Line="366" Column="1" />
+      <File FileName="Assets\Scripts\CharacterResponses_Scene_07.cs" Line="345" Column="19" />
+      <File FileName="Assets\Scripts\DialogGUI_Scene_07.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterInteract_Scene_07.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerPathController_Scene_07.cs" Line="13" Column="30" />
+      <File FileName="Assets\Scripts\PlayerPathController_Scene_06.cs" Line="19" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
