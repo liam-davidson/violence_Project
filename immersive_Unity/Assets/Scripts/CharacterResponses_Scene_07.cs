@@ -11,6 +11,7 @@ public class audio_Scene07_ReportIt {
 	public AudioClip clip3;
 	public AudioClip clip4;
 	public AudioClip clip5;
+	public AudioClip clip6;
 
 }
 
@@ -69,6 +70,9 @@ public class CharacterResponses_Scene_07 : MonoBehaviour {
 	public audio_Scene07_Ignore audioIgnore;
 	public audio_Scene07_Leave audioLeave;
 
+
+	private GameObject Manager;
+
 	int choiceCounter;
 	bool isSitting;
 	string currentAiLocation;
@@ -81,6 +85,7 @@ public class CharacterResponses_Scene_07 : MonoBehaviour {
 		currentAiLocation = "default";
 		maxChoiceNum = 2;
 		//Player = GameObject.Find("FirstPersonController");
+		Manager = GameObject.Find ("ManagerCarl");
 	}
 
 	void Update(){
@@ -195,15 +200,24 @@ public class CharacterResponses_Scene_07 : MonoBehaviour {
 
 	public IEnumerator ReportItAudio (){
 
+		iTweenEvent.GetEvent(Player,"WalkToManager").Play();
+		
+		yield return new WaitForSeconds(3.0f);
+
 		audio.clip = audioReportIt.clip1;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
-		
+
 		audio.clip = audioReportIt.clip2;
 		audio.Play ();
 
 		yield return new WaitForSeconds(audio.clip.length);
-		
+
+		iTweenEvent.GetEvent(Manager,"ManagerReportIt").Play();
+		iTweenEvent.GetEvent(Player,"WalkFromManager").Play();
+
+		yield return new WaitForSeconds(5.0f);
+
 		audio.clip = audioReportIt.clip3;
 		audio.Play ();
 
@@ -217,6 +231,12 @@ public class CharacterResponses_Scene_07 : MonoBehaviour {
 		audio.clip = audioReportIt.clip5;
 		audio.Play ();
 
+		yield return new WaitForSeconds(audio.clip.length);
+
+		iTweenEvent.GetEvent(Manager,"ManagerLeave").Play();
+
+		audio.clip = audioReportIt.clip6;
+		audio.Play ();
 
 		yield return new WaitForSeconds(audio.clip.length);
 		state.itemUseable = false;
