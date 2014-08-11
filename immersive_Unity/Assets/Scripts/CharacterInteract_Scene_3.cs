@@ -109,7 +109,7 @@ public class CharacterInteract_Scene_3 : MonoBehaviour {
 	}
 	
 	void FixedUpdate(){
-		target.text = "";
+		//target.text = "";
 		//renderer.material = Material.defaultMaterial;
 	}
 

@@ -5,6 +5,7 @@ public class PlayerPathController_Scene_3 : MonoBehaviour {
 
 
 	private CharacterInteract_Scene_3 AiInteract;
+
 	// Use this for initialization
 	void Start () {
 		AiInteract = GameObject.Find ("carl").GetComponent<CharacterInteract_Scene_3> ();
@@ -19,4 +20,6 @@ public class PlayerPathController_Scene_3 : MonoBehaviour {
 
 		AiInteract.itemUseable = false;
 	}
+
+
 }

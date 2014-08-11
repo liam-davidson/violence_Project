@@ -4,9 +4,37 @@ using System;
 using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class audio_Scene03_start {
+	public AudioClip clip1;
+}
+
+[System.Serializable]
+public class audio_Scene03_Threaten {
+	public AudioClip clip_threaten;
+	public AudioClip clip_threaten_2;
+}
+
+[System.Serializable]
+public class audio_Scene03_Talk {
+	public AudioClip clip_talk;
+	public AudioClip clip_talk_2;
+}
+
+[System.Serializable]
+public class audio_Scene03_Joke {
+	public AudioClip clip_joke;
+}
+
+[System.Serializable]
+public class audio_Scene03_Insult {
+	public AudioClip clip_insult;
+	public AudioClip clip_insult_2;
+}
+
 public class CharacterResponses_Scene_3 : MonoBehaviour {
 	public CharacterInteract_Scene_3 state;
-	public FocusOnPlayer aiLook;
+	//public FocusOnPlayer aiLook;
 	public GameObject AI;
 	public DialogGUI_Scene_3 dialogue;
 	public Transform targetLook;
@@ -15,6 +43,12 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 	private Animator animTV;
 	private Animator animKitchen;
 	public GameObject Player;
+
+	public audio_Scene03_start audioStart;
+	public audio_Scene03_Threaten audioThreaten;
+	public audio_Scene03_Talk audioTalk;
+	public audio_Scene03_Joke audioJoke;
+	public audio_Scene03_Insult audioInsult;
 
 	int choiceCounter;
 	bool isSitting;
@@ -31,6 +65,15 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 
 	void Update(){
 
+		//print (choiceCounter);
+
+		if (choiceCounter == maxChoiceNum){
+			iTween.CameraFadeAdd ();
+			iTween.CameraFadeFrom (1,1);
+			//Application.Quit();
+			Application.LoadLevel ("Menu"); 
+		}
+
 		isSitting = anim.GetBool("isSitting");
 		//print ("isSitting = " + isSitting);
 		//print ("ChoiceCounter = " + choiceCounter);
@@ -44,9 +87,9 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		case 1:
 			print ("case1 ACTIVATE!");
 
-			iTweenEvent.GetEvent(AI,"antag_leave").Play();
-			aiLook.enabled = false;
-			anim.SetBool("isWalking", true);
+			//iTweenEvent.GetEvent(AI,"antag_leave").Play();
+			//aiLook.enabled = false;
+			//anim.SetBool("isWalking", true);
 
 			choiceCounter++;
 			LeaveDialog();
@@ -60,7 +103,9 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 			break;	
 		
 		case 3:
-			print ("case3 ACTIVATE!");
+			print ("case3 ACTIVATE! THREATEN");
+
+			StartCoroutine ("AudioThreaten");
 
 			choiceCounter++;
 			LeaveDialog();
@@ -69,6 +114,8 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		case 4:
 			print ("case4 ACTIVATE!");
 
+			iTweenEvent.GetEvent(Player,"protag_leave").Play();
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
@@ -76,12 +123,16 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		case 5:
 			print ("case5 ACTIVATE!");
 
+			iTweenEvent.GetEvent(Player,"protag_leave").Play();
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 			
 		case 6:
 			print ("case6 ACTIVATE!");
+
+			StartCoroutine ("AudioJoke");
 
 			//iTweenEvent.GetEvent(AI,"TVPathEvent").Play();
 			//aiLook.enabled = false;
@@ -94,12 +145,16 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		case 7:
 			print ("case7 ACTIVATE!");
 
+			StartCoroutine ("AudioInsult");
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
 			
 		case 8:
 			print ("case8 ACTIVATE!");
+
+			StartCoroutine("AudioTalk");
 
 			choiceCounter++;
 			LeaveDialog();
@@ -116,7 +171,64 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 			break;
 		}
 	}
-	
+
+	IEnumerator  AudioIntro(){
+		audio.clip = audioStart.clip1;
+		audio.Play ();
+		
+		yield return new WaitForSeconds(audio.clip.length);
+		state.itemUseable = false;
+	}
+
+	IEnumerator AudioThreaten(){
+		audio.clip = audioThreaten.clip_threaten;
+		audio.Play ();
+
+		yield return new WaitForSeconds (audio.clip.length);
+
+		audio.clip = audioThreaten.clip_threaten_2;
+		audio.Play ();
+
+		state.itemUseable = false;
+	}
+
+	IEnumerator AudioTalk(){
+		audio.clip = audioTalk.clip_talk;
+		audio.Play ();
+
+		yield return new WaitForSeconds (audio.clip.length);
+
+		audio.clip = audioTalk.clip_talk_2;
+		audio.Play ();
+
+		state.itemUseable = false;
+	}
+
+	IEnumerator AudioJoke(){
+		audio.clip = audioJoke.clip_joke;
+		audio.Play ();
+
+		yield return new WaitForSeconds (audio.clip.length);
+
+		state.itemUseable = false;
+	}
+
+	IEnumerator AudioInsult(){
+		audio.clip = audioInsult.clip_insult;
+		audio.Play ();
+
+		yield return new WaitForSeconds (audio.clip.length);
+
+		audio.clip = audioInsult.clip_insult_2;
+		audio.Play ();
+
+		state.itemUseable = false;
+	}
+
+	public void OnComplete(){
+		state.itemUseable = false;
+	}
+
 	void AddToFile(){
 		//StreamWriter sw = new StreamWriter("TestFile.txt");
 		StreamWriter sw = File.AppendText ("TestFile.txt");
@@ -138,21 +250,16 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		print("Exited Dialog!");
 	}
 
-	void kitchenEventEnd(){
+	void StartIntro(){
+		anim.SetBool("isWalking", false);
+		StartCoroutine ("AudioIntro");
 
-		anim.SetBool("interact", true);
-		eventEnd ();
 	}
 
-	void chairEventEnd(){
-		//Vector3 tempPos = new Vector3(0,targetLook.position.y,0);
-		//transform.LookAt (tempPos);
-		transform.LookAt(new Vector3(targetLook.position.x, transform.position.y, targetLook.position.z));
-	
-		anim.SetBool("isSitting", true);
-		eventEnd ();
+	void StartWalking() {
+		anim.SetBool("isWalking", true);
 	}
-	
+
 	void eventEnd(){
 
 		if (choiceCounter == maxChoiceNum){
