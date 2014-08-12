@@ -1,15 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-/*[System.Serializable]
-public class materials
-{
-	//Define materials used to create a glowing character.
-	public Material defaultMaterial;
-	public Material glowMaterial;
-}*/
-
-public class CharacterInteract_Scene_06 : MonoBehaviour {
+public class CharacterInteract_Scene_08 : MonoBehaviour {
 
 	//public materials Material;
 
@@ -58,7 +50,7 @@ public class CharacterInteract_Scene_06 : MonoBehaviour {
 
 		if(!itemUseable){
 
-			GetComponent<DialogGUI_Scene_06>().enabled = true;
+			GetComponent<DialogGUI_Scene_08>().enabled = true;
 
 			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = true;
 			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = true;
@@ -87,7 +79,7 @@ public class CharacterInteract_Scene_06 : MonoBehaviour {
 		//then allow the player to move and look around again.
 		else if(rotationReset){
 		
-			GetComponent<DialogGUI_Scene_06>().enabled = false;
+			GetComponent<DialogGUI_Scene_08>().enabled = false;
 
 			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
 			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = false;

@@ -39,12 +39,11 @@ public class PlayerPathController_Scene_06 : MonoBehaviour {
 	}
 	
 	IEnumerator  StartIntro(){
-
-		/*audio.clip = audioStart.clip1;
+		
+		audio.clip = audioStart.clip1;
 		audio.Play ();
-
 		yield return new WaitForSeconds(audio.clip.length);
-
+		
 		audio.clip = audioStart.clip2;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
@@ -52,19 +51,19 @@ public class PlayerPathController_Scene_06 : MonoBehaviour {
 		audio.clip = audioStart.clip3;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
-
+		
 		audio.clip = audioStart.clip4;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
-		
-		audio.clip = audioStart.clip5;
-		audio.Play ();
-		yield return new WaitForSeconds(audio.clip.length);*/
 
-		audio.clip = audioStart.clip6;
+		audio.clip = audioStart.clip5;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
 		
+		audio.clip = audioStart.clip6;
+		audio.Play ();
+		yield return new WaitForSeconds(audio.clip.length);
+
 		audio.clip = audioStart.clip7;
 		audio.Play ();
 		yield return new WaitForSeconds(audio.clip.length);
