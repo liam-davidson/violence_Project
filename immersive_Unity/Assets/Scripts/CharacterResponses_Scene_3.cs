@@ -32,6 +32,12 @@ public class audio_Scene03_Insult {
 	public AudioClip clip_insult_2;
 }
 
+[System.Serializable]
+public class audio_Scene03_Report {
+	public AudioClip clip_report;
+	public AudioClip clip_report_2;
+}
+
 public class CharacterResponses_Scene_3 : MonoBehaviour {
 	public CharacterInteract_Scene_3 state;
 	//public FocusOnPlayer aiLook;
@@ -49,6 +55,7 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 	public audio_Scene03_Talk audioTalk;
 	public audio_Scene03_Joke audioJoke;
 	public audio_Scene03_Insult audioInsult;
+	public audio_Scene03_Report audioReport;
 
 	int choiceCounter;
 	bool isSitting;
@@ -163,6 +170,8 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 		case 9:
 			print ("case9 ACTIVATE!");
 
+			StartCoroutine("AudioReport");
+
 			choiceCounter++;
 			LeaveDialog();
 			break;
@@ -221,6 +230,25 @@ public class CharacterResponses_Scene_3 : MonoBehaviour {
 
 		audio.clip = audioInsult.clip_insult_2;
 		audio.Play ();
+
+		state.itemUseable = false;
+	}
+	
+	IEnumerator AudioReport(){
+
+		iTweenEvent.GetEvent(Player,"Manager_enter").Play();
+		yield return new WaitForSeconds (7);
+
+		audio.clip = audioReport.clip_report;
+		audio.Play ();
+		
+		yield return new WaitForSeconds (audio.clip.length);
+
+		audio.clip = audioReport.clip_report_2;
+		audio.Play ();
+
+		iTweenEvent.GetEvent(Player,"Manager_leave").Play();
+		yield return new WaitForSeconds (7);
 
 		state.itemUseable = false;
 	}
