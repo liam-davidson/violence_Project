@@ -27688,13 +27688,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061240354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e415a83b0be87884a9090fae8328c2a2, type: 3}
+  m_Script: {fileID: 11500000, guid: d0257439d29534446b27056523b3844b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1061240354}
   audioStart:
-    clip1: {fileID: 8300000, guid: b99c0bc59454a7b419b04da51ab1d2e0, type: 3}
-    clip2: {fileID: 8300000, guid: fa7cc54cf78355d47bbae72bfd45f62a, type: 3}
+    clip1: {fileID: 8300000, guid: ce177a9852a3a4c458302daee9f0fefe, type: 3}
+    clip2: {fileID: 8300000, guid: 10bff66a9a61b0d448ea168e4e7f1e71, type: 3}
 --- !u!82 &1061240358
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30620,6 +30620,9 @@ GameObject:
   - 114: {fileID: 1177035596}
   - 114: {fileID: 1177035595}
   - 114: {fileID: 1177035593}
+  - 114: {fileID: 1177035599}
+  - 114: {fileID: 1177035598}
+  - 114: {fileID: 1177035597}
   m_Layer: 0
   m_Name: Antagonist
   m_TagString: Untagged
@@ -30745,7 +30748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db17c10cddffcf44295bb02e03f74584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  responseNum: 0
 --- !u!114 &1177035594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30773,32 +30775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb5832bf90dd854582e5b829a331ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: {fileID: 1177035596}
-  aiLook: {fileID: 1177035594}
-  AI: {fileID: 1177035588}
-  dialogue: {fileID: 1177035593}
-  Player: {fileID: 1061240354}
-  audioReportIt:
-    clip1: {fileID: 8300000, guid: bfca9fdb2c82a9e4ab5053346ac445cb, type: 3}
-    clip2: {fileID: 8300000, guid: 1fbcd86a5b8aed84499f1edf48a45fdc, type: 3}
-    clip3: {fileID: 8300000, guid: 2925c4ee4f5a35246a69bc2581be25a0, type: 3}
-    clip4: {fileID: 8300000, guid: 155b7b401789c974ba6332cf01e6c157, type: 3}
-  audioTalkItOut:
-    clip1: {fileID: 8300000, guid: 8145b49becbb182459ee188093072663, type: 3}
-    clip2: {fileID: 8300000, guid: 34d4df68cc75a2144aff3ed8568bdef1, type: 3}
-  audioInsult:
-    clip1: {fileID: 8300000, guid: de7c3477d9d6ebe4190aab39630aa889, type: 3}
-    clip2: {fileID: 8300000, guid: 03af8a9d675793b479dd23bb442d7803, type: 3}
-  audioJoke:
-    clip1: {fileID: 8300000, guid: 3f9ca63b81d217b48a816bf6236afd0c, type: 3}
-    clip2: {fileID: 8300000, guid: 0dd9f5ef69fb6b7429ffc56d186d61e8, type: 3}
-  audioThreaten:
-    clip1: {fileID: 8300000, guid: 42fe40e08ed66df4093bd00f2fd681e2, type: 3}
-    clip2: {fileID: 8300000, guid: e8926895754993c4fa14eb69e116dc85, type: 3}
-  audioIgnore:
-    clip1: {fileID: 8300000, guid: 1a6e63c7218175440a6e8139a7b39b15, type: 3}
-  audioLeave:
-    clip1: {fileID: 8300000, guid: ff5e239359dae7d4f8fd1ef1ca153622, type: 3}
 --- !u!114 &1177035596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30808,6 +30784,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 356faf28e19bc294f80a3bb2aa2e4604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1177035597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38851ff8cdf0aff4e87e24f14cbfb768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseNum: 0
+--- !u!114 &1177035598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7188ff79d2a32246940aaaeb0f1cf2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 1177035599}
+  aiLook: {fileID: 1177035594}
+  AI: {fileID: 1177035588}
+  dialogue: {fileID: 1177035597}
+  Player: {fileID: 1061240354}
+  audioReportIt:
+    clip1: {fileID: 8300000, guid: 5ff36501954cc1341b76c2ff418ac598, type: 3}
+    clip2: {fileID: 8300000, guid: 0e4afc9373a040e4c9aba0b725d8d858, type: 3}
+    clip3: {fileID: 8300000, guid: a571852bb41dda44c8e2c0b5a043f4dc, type: 3}
+    clip4: {fileID: 8300000, guid: 1c7c994d0750e7e42a284d43159e8ec8, type: 3}
+  audioTalkItOut:
+    clip1: {fileID: 8300000, guid: 0af96fdc9f93e8248b3069cf1eb96517, type: 3}
+    clip2: {fileID: 8300000, guid: bd1964f594f77b94db3e0ff044bfaba7, type: 3}
+  audioInsult:
+    clip1: {fileID: 8300000, guid: 9c7e31ce7648792448badfe454d1c483, type: 3}
+    clip2: {fileID: 8300000, guid: e22b13f6b8ed25f4c9c8e910f00ad47e, type: 3}
+  audioJoke:
+    clip1: {fileID: 8300000, guid: 39b8fa0ab99edbf49bad732639f83449, type: 3}
+    clip2: {fileID: 8300000, guid: 6b4be9e501686b64d92ebae0e6fc6ad3, type: 3}
+  audioThreaten:
+    clip1: {fileID: 8300000, guid: 90e1073c027433a40898f4ad351ec529, type: 3}
+    clip2: {fileID: 8300000, guid: 128a14291ff178c4a93cc40030942ba8, type: 3}
+  audioIgnore:
+    clip1: {fileID: 8300000, guid: f7f6b139ead99894ea5a36f9d1e1ab54, type: 3}
+  audioLeave:
+    clip1: {fileID: 8300000, guid: 1d14e8273678bbc4896ad72b8b5f0993, type: 3}
+--- !u!114 &1177035599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef18ec73608e15e458a9c61ddab56a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetFollow: {fileID: 1061240355}
