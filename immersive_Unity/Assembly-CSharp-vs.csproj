@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\CharacterInteract_Scene_06.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract_Scene_07.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract_Scene_08.cs" />
+     <Compile Include="Assets\Scripts\CharacterInteract_Scene_09.cs" />
      <Compile Include="Assets\Scripts\CharacterInteract_Scene_3.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_02.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_06.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_07.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_08.cs" />
+     <Compile Include="Assets\Scripts\CharacterResponses_Scene_09.cs" />
      <Compile Include="Assets\Scripts\CharacterResponses_Scene_3.cs" />
      <Compile Include="Assets\Scripts\DialogGUI.cs" />
      <Compile Include="Assets\Scripts\DialogGUI_Scene_01.cs" />
@@ -79,6 +81,7 @@
      <Compile Include="Assets\Scripts\DialogGUI_Scene_06.cs" />
      <Compile Include="Assets\Scripts\DialogGUI_Scene_07.cs" />
      <Compile Include="Assets\Scripts\DialogGUI_Scene_08.cs" />
+     <Compile Include="Assets\Scripts\DialogGUI_Scene_09.cs" />
      <Compile Include="Assets\Scripts\DialogGUI_Scene_3.cs" />
      <Compile Include="Assets\Scripts\FocusOnPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
@@ -89,6 +92,7 @@
      <Compile Include="Assets\Scripts\PlayerPathController_Scene_06.cs" />
      <Compile Include="Assets\Scripts\PlayerPathController_Scene_07.cs" />
      <Compile Include="Assets\Scripts\PlayerPathController_Scene_08.cs" />
+     <Compile Include="Assets\Scripts\PlayerPathController_Scene_09.cs" />
      <Compile Include="Assets\Scripts\PlayerPathController_Scene_3.cs" />
      <Compile Include="Assets\Scripts\SmoothLook.cs" />
      <Compile Include="Assets\Scripts\SmoothLook1.cs" />
