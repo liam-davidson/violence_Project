@@ -216,7 +216,7 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 
 		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
 		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
-		iTweenEvent.GetEvent(GF,"LookAt").Play();
+
 		audio.clip = audioTalkItOut.clip2;
 		audio.Play ();
 
@@ -233,7 +233,6 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 
 		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
 		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
-		iTweenEvent.GetEvent(GF,"LookAt").Play();
 
 		audio.clip = audioInsult.clip2;
 		audio.Play ();
@@ -251,7 +250,6 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 
 		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
 		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
-		iTweenEvent.GetEvent(GF,"LookAt").Play();
 
 		audio.clip = audioJoke.clip2;
 		audio.Play ();
@@ -278,7 +276,6 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 
 		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
 		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
-		iTweenEvent.GetEvent(GF,"LookAt").Play();
 
 		audio.clip = audioIgnore.clip1;
 		audio.Play ();
@@ -291,8 +288,7 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 
 		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
 		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
-		iTweenEvent.GetEvent(GF,"LookAt").Play();
-
+	
 		audio.clip = audioLeave.clip1;
 		audio.Play ();
 		
@@ -321,18 +317,14 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 		print("Exited Dialog!");
 	}
 
-	void tvEventEnd(){
+	void startWalking(){
+		anim.SetBool ("isWalking", true);
+	}
 
-		anim.SetBool("isWalking", false);
-		eventEnd ();
-		//anim.SetBool("interact", true);
-		/*if(anim.GetFloat("interactTime") == 0.12){
-			animTV.SetBool("isTVOn", true);
-			anim.SetBool("interact", false);
-		}*/
-		animTV.SetBool("isTVOn", true);
-		iTweenEvent.GetEvent(AI,"SitEvent").Play();
-		anim.SetBool("isWalking", true);
+	void stopWalking(){
+		anim.SetBool ("isWalking", false);
+		iTweenEvent.GetEvent(AI,"AILookAt").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
 	}
 
 	void IntroEventStart(){

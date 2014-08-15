@@ -11181,6 +11181,7 @@ GameObject:
   - 114: {fileID: 647363731}
   - 114: {fileID: 647363730}
   - 114: {fileID: 647363728}
+  - 114: {fileID: 647363734}
   m_Layer: 0
   m_Name: Antagonist
   m_TagString: Untagged
@@ -11273,24 +11274,34 @@ MonoBehaviour:
   showIconInInspector: 1
   keys:
   - path
-  - time
   - delay
-  indexes: 000000000000000001000000
+  - onstart
+  - oncomplete
+  - time
+  - orienttopath
+  - easetype
+  indexes: 00000000000000000100000002000000010000000000000000000000
   metadatas:
   - p
   - 
   - 
+  - 
+  - 
+  - 
+  - 
   ints: 
   floats:
-  - 2
   - 0
-  bools: 
+  - 3
+  bools: 00
   strings:
   - AntagonistSideStep
+  - startWalking
+  - stopWalking
   vector3s: []
   colors: []
   spaces: 
-  easeTypes: 
+  easeTypes: 15000000
   loopTypes: 
   gameObjects: []
   transforms: []
@@ -11401,6 +11412,7 @@ MonoBehaviour:
   AI: {fileID: 647363722}
   dialogue: {fileID: 647363731}
   Player: {fileID: 1964292500}
+  GF: {fileID: 1687738524}
   audioReportIt:
     clip1: {fileID: 8300000, guid: ceb0be1aca30cb7438e211a88eeff5d7, type: 3}
     clip2: {fileID: 8300000, guid: 268db88c4baf3a74aaf1a370f5294f96, type: 3}
@@ -11433,6 +11445,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetFollow: {fileID: 1964292501}
   itemUseable: 1
+--- !u!114 &647363734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647363722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: AILookAt
+  playAutomatically: 0
+  delay: 0
+  type: 12
+  showIconInInspector: 1
+  keys:
+  - looktarget
+  indexes: 00000000
+  metadatas:
+  - t
+  ints: 
+  floats: []
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms:
+  - {fileID: 1687738525}
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &651195080
 GameObject:
   m_ObjectHideFlags: 0
@@ -15528,8 +15578,8 @@ MonoBehaviour:
   pathName: PlayerSidestep
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: .569919944, y: 0, z: -.500123441}
-  - {x: .244179249, y: 0, z: -.693670869}
+  - {x: .300774723, y: .150000006, z: -.553180158}
+  - {x: .519493699, y: .150000006, z: -.459509552}
   nodeCount: 2
   initialized: 1
   initialName: New Path 1
@@ -27963,7 +28013,7 @@ MonoBehaviour:
   pathColor: {r: .823529422, g: .133217975, b: .233193964, a: 1}
   nodes:
   - {x: .0826218724, y: 0, z: -.470290571}
-  - {x: .321673393, y: 0, z: -.765205562}
+  - {x: .321673393, y: 0, z: -.689525783}
   nodeCount: 2
   initialized: 1
   initialName: New Path 1
@@ -30040,8 +30090,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1687738525}
   - 95: {fileID: 1687738526}
+  - 114: {fileID: 1687738527}
   m_Layer: 0
-  m_Name: FuseModel-gq5060
+  m_Name: Girlfriend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30080,6 +30131,46 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+--- !u!114 &1687738527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687738524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: LookAt
+  playAutomatically: 0
+  delay: 0
+  type: 12
+  showIconInInspector: 1
+  keys:
+  - looktarget
+  - easetype
+  indexes: 0000000000000000
+  metadatas:
+  - t
+  - 
+  ints: 
+  floats: []
+  bools: 
+  strings: []
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 15000000
+  loopTypes: 
+  gameObjects: []
+  transforms:
+  - {fileID: 647363723}
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!1 &1688622327
 GameObject:
   m_ObjectHideFlags: 0
@@ -34027,23 +34118,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenName: PlayerSidestep
-  playAutomatically: 1
+  playAutomatically: 0
   delay: 0
   type: 17
   showIconInInspector: 1
   keys:
-  - path
   - time
   - delay
-  indexes: 000000000000000001000000
+  - path
+  indexes: 000000000100000000000000
   metadatas:
+  - 
+  - 
   - p
-  - 
-  - 
   ints: 
   floats:
-  - 3
-  - 0
+  - 4
+  - .300000012
   bools: 
   strings:
   - PlayerSidestep
@@ -34899,6 +34990,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0e650a0e16a5e9c468906e3e55f32814, type: 2}
+    - target: {fileID: 100004, guid: 69be7ccdc440b9547a88999d08a3f55d, type: 3}
+      propertyPath: m_Name
+      value: Girlfriend
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69be7ccdc440b9547a88999d08a3f55d, type: 3}
   m_RootGameObject: {fileID: 1687738524}
