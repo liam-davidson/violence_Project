@@ -56,7 +56,7 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 	private Animator animTV;
 	private Animator animKitchen;
 	public GameObject Player;
-	
+	public GameObject GF;
 	public audio_Scene09_ReportIt audioReportIt;
 	public audio_Scene09_TalkItOut audioTalkItOut;
 	public audio_Scene09_Insult audioInsult;
@@ -76,7 +76,7 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 		//animTV = GameObject.Find("TVOn_0").GetComponent<Animator>();
 		currentAiLocation = "default";
 		maxChoiceNum = 2;
-		//Player = GameObject.Find("FirstPersonController");
+		//GF = GameObject.Find("Girlfriend");
 
 	}
 
@@ -213,7 +213,10 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 		audio.Play ();
 		
 		yield return new WaitForSeconds(audio.clip.length);
-		
+
+		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
+		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
 		audio.clip = audioTalkItOut.clip2;
 		audio.Play ();
 
@@ -227,7 +230,11 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 		audio.Play ();
 		
 		yield return new WaitForSeconds(audio.clip.length);
-		
+
+		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
+		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
+
 		audio.clip = audioInsult.clip2;
 		audio.Play ();
 		
@@ -241,7 +248,11 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 		audio.Play ();
 		
 		yield return new WaitForSeconds(audio.clip.length);
-		
+
+		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
+		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
+
 		audio.clip = audioJoke.clip2;
 		audio.Play ();
 		
@@ -264,7 +275,11 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 	}
 	
 	public IEnumerator IgnoreAudio (){
-		
+
+		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
+		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
+
 		audio.clip = audioIgnore.clip1;
 		audio.Play ();
 		
@@ -273,7 +288,11 @@ public class CharacterResponses_Scene_09 : MonoBehaviour {
 	}
 
 	public IEnumerator LeaveAudio (){
-		
+
+		iTweenEvent.GetEvent(Player,"PlayerSidestep").Play();
+		iTweenEvent.GetEvent(AI,"AntagonistSideStep").Play();
+		iTweenEvent.GetEvent(GF,"LookAt").Play();
+
 		audio.clip = audioLeave.clip1;
 		audio.Play ();
 		

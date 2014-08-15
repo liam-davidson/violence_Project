@@ -5125,7 +5125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49291922be796f149a24a40817aace00, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49291922be796f149a24a40817aace00, type: 3}
@@ -11180,6 +11180,7 @@ GameObject:
   - 114: {fileID: 647363732}
   - 114: {fileID: 647363731}
   - 114: {fileID: 647363730}
+  - 114: {fileID: 647363728}
   m_Layer: 0
   m_Name: Antagonist
   m_TagString: Untagged
@@ -11205,7 +11206,7 @@ Transform:
   - {fileID: 1501785613}
   - {fileID: 1593134639}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!95 &647363724
 Animator:
   serializedVersion: 3
@@ -11254,6 +11255,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5536d8b18a609c14eba347462ab54fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &647363728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647363722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: AntagonistSideStep
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  indexes: 000000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  ints: 
+  floats:
+  - 2
+  - 0
+  bools: 
+  strings:
+  - AntagonistSideStep
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!82 &647363729
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15371,6 +15416,7 @@ GameObject:
   - 114: {fileID: 871991771}
   - 114: {fileID: 871991773}
   - 114: {fileID: 871991772}
+  - 114: {fileID: 871991774}
   m_Layer: 0
   m_Name: Player Paths
   m_TagString: Untagged
@@ -15466,6 +15512,25 @@ MonoBehaviour:
   - {x: .771915376, y: .150000006, z: -.360749096}
   - {x: -.450384021, y: 0, z: -.446253061}
   nodeCount: 3
+  initialized: 1
+  initialName: New Path 1
+--- !u!114 &871991774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871991768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: PlayerSidestep
+  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  nodes:
+  - {x: .569919944, y: 0, z: -.500123441}
+  - {x: .244179249, y: 0, z: -.693670869}
+  nodeCount: 2
   initialized: 1
   initialName: New Path 1
 --- !u!1 &872661345
@@ -27863,6 +27928,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1583679535}
+  - 114: {fileID: 1583679536}
   m_Layer: 0
   m_Name: AI Paths
   m_TagString: Untagged
@@ -27882,6 +27948,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1099155724}
   m_RootOrder: 0
+--- !u!114 &1583679536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583679534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ef3b15c32eb43108261a87963b8937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathName: AntagonistSideStep
+  pathColor: {r: .823529422, g: .133217975, b: .233193964, a: 1}
+  nodes:
+  - {x: .0826218724, y: 0, z: -.470290571}
+  - {x: .321673393, y: 0, z: -.765205562}
+  nodeCount: 2
+  initialized: 1
+  initialName: New Path 1
 --- !u!1 &1586011967
 GameObject:
   m_ObjectHideFlags: 0
@@ -27970,7 +28055,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1593134638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0130749289, y: 1.082286, z: -.0649140999}
+  m_LocalPosition: {x: -.0130749233, y: .647739053, z: -.0649140999}
   m_LocalScale: {x: 4.7783761, y: 4.7783761, z: 4.7783761}
   m_Children: []
   m_Father: {fileID: 647363723}
@@ -33813,6 +33898,7 @@ GameObject:
   - 114: {fileID: 1964292509}
   - 82: {fileID: 1964292503}
   - 114: {fileID: 1964292502}
+  - 114: {fileID: 1964292504}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -33832,7 +33918,7 @@ Transform:
   m_Children:
   - {fileID: 297552469}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1964292502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33929,6 +34015,50 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1964292504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1964292500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0401554a0e6f9466db3c1a798d358b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenName: PlayerSidestep
+  playAutomatically: 1
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - path
+  - time
+  - delay
+  indexes: 000000000000000001000000
+  metadatas:
+  - p
+  - 
+  - 
+  ints: 
+  floats:
+  - 3
+  - 0
+  bools: 
+  strings:
+  - PlayerSidestep
+  vector3s: []
+  colors: []
+  spaces: 
+  easeTypes: 
+  loopTypes: 
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
 --- !u!114 &1964292509
 MonoBehaviour:
   m_ObjectHideFlags: 0
