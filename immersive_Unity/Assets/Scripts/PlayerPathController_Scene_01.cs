@@ -8,7 +8,7 @@ public class PlayerPathController_Scene_01 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		AiInteract = GameObject.Find ("carl").GetComponent<CharacterInteract_Scene_01> ();
+		AiInteract = GameObject.Find ("FuseModel").GetComponent<CharacterInteract_Scene_01> ();
 	}
 	
 	// Update is called once per frame

@@ -5251,7 +5251,7 @@ Transform:
   - {fileID: 1946974850}
   - {fileID: 1019676766}
   m_Father: {fileID: 804794613}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!95 &178132229
 Animator:
   serializedVersion: 3
@@ -21429,9 +21429,9 @@ Transform:
   m_LocalPosition: {x: -2.19706273, y: 5.11257839, z: 3.07398796}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1624354679}
   - {fileID: 966934981}
   - {fileID: 178132228}
-  - {fileID: 1624354679}
   m_Father: {fileID: 0}
   m_RootOrder: 12
 --- !u!1 &806553363
@@ -25216,7 +25216,7 @@ Transform:
   - {fileID: 1286171742}
   - {fileID: 38116615}
   m_Father: {fileID: 804794613}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!95 &966934982
 Animator:
   serializedVersion: 3
@@ -31261,6 +31261,9 @@ GameObject:
   - 114: {fileID: 1177035594}
   - 114: {fileID: 1177035593}
   - 82: {fileID: 1177035592}
+  - 114: {fileID: 1177035599}
+  - 114: {fileID: 1177035598}
+  - 114: {fileID: 1177035597}
   m_Layer: 0
   m_Name: Antagonist
   m_TagString: Untagged
@@ -31450,6 +31453,50 @@ MonoBehaviour:
   audioThreaten:
     clip1: {fileID: 0}
     clip2: {fileID: 0}
+--- !u!114 &1177035597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d233c3fe6c395d45a5532ff780cdb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FaceMesh: {fileID: 898162333}
+  ExtraBlendshapeMeshes: []
+--- !u!114 &1177035598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70e5a4c8cb158a40a172beeb3d369e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preset: {fileID: 0}
+--- !u!114 &1177035599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177035588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547866e19aa4f4440b4418bec103c58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CommonPrefix: 
+  HeadJoint: {fileID: 1428565949}
+  LeftEyeTransform: {fileID: 8895892}
+  RightEyeTransform: {fileID: 418129794}
+  Type: 1
+  FaceJoints: []
+  SDK_Definition: {fileID: 0}
+  FaceMesh: {fileID: 898162333}
 --- !u!1 &1180043345
 GameObject:
   m_ObjectHideFlags: 0
@@ -44586,7 +44633,7 @@ Transform:
   - {fileID: 1415266128}
   - {fileID: 967280013}
   m_Father: {fileID: 804794613}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!95 &1624354680
 Animator:
   serializedVersion: 3

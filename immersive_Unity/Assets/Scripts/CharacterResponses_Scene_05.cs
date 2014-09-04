@@ -62,6 +62,8 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 	private Animator animTV;
 	private Animator animKitchen;
 	public GameObject Player;
+	public GameObject Roommate;
+
 
 	public audio_Scene05_Intro audioIntro;
 	public audio_Scene05_ReportIt audioReportIt;
@@ -306,7 +308,7 @@ public class CharacterResponses_Scene_05 : MonoBehaviour {
 		//GameObject.FindWithTag("Description").GetComponent<GUIText>().text = "";
 		//GameObject.FindWithTag("Description").GetComponent<GUIText>().enabled = false;
 		
-		GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
+		//GameObject.FindWithTag("PlayerArms").GetComponent<Animation>().enabled = true;
 
 		AddToFile();
 

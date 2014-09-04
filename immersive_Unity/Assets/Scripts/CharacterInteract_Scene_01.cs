@@ -105,7 +105,7 @@ public class CharacterInteract_Scene_01 : MonoBehaviour {
 		else if(rotationReset){
 		
 			GetComponent<DialogGUI_Scene_01>().enabled = false;
-			
+
 			GameObject.Find("radial_background").GetComponent<MeshRenderer>().enabled = false;
 			GameObject.Find ("radial_dial").GetComponent<MeshRenderer>().enabled = false;
 			hideMenu = true;

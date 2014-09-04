@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class DialogGUI_Scene_01 : MonoBehaviour {
 	
 	private float y;
@@ -17,15 +16,20 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 	private float test;
 	private float deltaX;
 	private float deltaY;
-	
+
 	private CharacterInteract_Scene_01 state;
 	private Vector3 scale;
 	private CharacterResponses response;
-	
+
+	//public options_S01 dialogMenu;
+	//public radialMenu_S01 radialMenuObj;
+	//public radialMat_S01 radialMenuMat;
+
+		
 	float originalWidth = 1024.0f;
 	float originalHeight = 768.0f;
 	float traverseSpeed = 360;
-	
+
 	GameObject radialBackground;
 	GameObject controllerArrow;
 	GameObject Option1;
@@ -47,15 +51,14 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 	Material off_7;
 	Material off_8;
 	Material off_9;
-	
+
 	public int responseNum;
-	
+
 	void Start(){
 		state = gameObject.GetComponent<CharacterInteract_Scene_01>();
 		response = GetComponent<CharacterResponses>();
 		responseNum = 0;
-		
-		
+
 		radialBackground = GameObject.Find("radial_background");
 		controllerArrow = GameObject.Find("radial_dial");
 		Option1 = GameObject.Find("radial_1");
@@ -90,20 +93,19 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 		Option7.renderer.enabled = false;
 		Option8.renderer.enabled = false;
 		Option9.renderer.enabled = false;
-		
-		
+
 	}
-	
+
 	void Update () {
 		x = Input.GetAxis("JoyHorizontal");
 		y = Input.GetAxis("JoyVertical");
-		
+
 		//x = Input.mousePosition.x;
 		//y = Input.mousePosition.y;
-		
+
 		stickVector.x = x;
 		stickVector.y = y;
-		
+
 		centerVector.x = 0.0f;
 		centerVector.y = 0.0f;
 		
@@ -113,11 +115,11 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 		deltaY = y - 0;
 		
 		test = Mathf.Atan2(deltaY, deltaX) * 180 / 3.14f;
-		
+
 		v3.x = -test;
 		v3.y = 90;
 		v3.z = -90;
-		
+
 		controllerArrow.transform.localEulerAngles = v3;
 		
 		Option1.renderer.material = off_1;
@@ -129,7 +131,7 @@ public class DialogGUI_Scene_01 : MonoBehaviour {
 		Option7.renderer.material = off_7;
 		Option8.renderer.material = off_8;
 		Option9.renderer.material = off_9;
-		
+
 		if (test < 72 && test > 36) {
 			//Option1.renderer.enabled = false;
 			Option1.renderer.material.color = Color.red;
